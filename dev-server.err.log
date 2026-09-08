@@ -1,0 +1,636 @@
+10:42:50 a. m. [vite] (client) [console.warn] GSAP target .experience-kicker, .experience-copy h2 not found. https://gsap.com
+10:42:50 a. m. [vite] (client) [console.warn] GSAP target  not found. https://gsap.com
+11:26:08 a. m. [vite] (client) [console.warn] GSAP target .experience-kicker, .experience-copy h2 not found. https://gsap.com
+11:26:08 a. m. [vite] (client) [console.warn] GSAP target  not found. https://gsap.com
+12:16:04 p. m. [vite] (client) [console.warn] GSAP target .experience-kicker, .experience-copy h2 not found. https://gsap.com
+12:16:04 p. m. [vite] (client) [console.warn] GSAP target  not found. https://gsap.com
+3:34:18 p. m. [vite] (client) [console.warn] GSAP target .experience-kicker, .experience-copy h2 not found. https://gsap.com
+3:34:18 p. m. [vite] (client) [console.warn] GSAP target  not found. https://gsap.com
+4:40:04 p. m. [vite] (client) [console.warn] GSAP target .experience-kicker, .experience-copy h2 not found. https://gsap.com
+4:40:04 p. m. [vite] (client) [console.warn] GSAP target  not found. https://gsap.com
+4:40:48 p. m. [vite] (client) [console.warn] GSAP target .experience-kicker, .experience-copy h2 not found. https://gsap.com
+4:40:48 p. m. [vite] (client) [console.warn] GSAP target  not found. https://gsap.com
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+4:49:57 p. m. [vite] (client) [console.error] [vite] Failed to reload /app/components/HomeClient.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+4:52:27 p. m. [vite] (client) [console.error] Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+4:52:27 p. m. [vite] (client) [console.error] Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+4:52:27 p. m. [vite] (client) [console.error] TypeError: Cannot read properties of null (reading 'useContext')
+    at exports.useContext (http://localhost:3000/node_modules/.vite/deps/react-DNKNjk6d.js?v=d3f0d8c0:718:22)
+    at useLucideContext (http://localhost:3000/node_modules/.vite/deps/lucide-react.js?v=5f2b2069:99:58)
+    at http://localhost:3000/node_modules/.vite/deps/lucide-react.js?v=5f2b2069:109:199
+    at Object.react_stack_bottom_frame (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=9a7d8080:12867:12)
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=9a7d8080:4212:19)
+    at updateForwardRef (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=9a7d8080:5395:16)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=9a7d8080:6203:21)
+    at runWithFiberInDEV (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=9a7d8080:850:66)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=9a7d8080:8428:92)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=9a7d8080:8324:37)
+4:52:27 p. m. [vite] (client) [console.error] The above error occurred in a React component:
+
+    at http://localhost:3000/node_modules/.vite/deps/lucide-react.js?v=5f2b2069:108:44
+    at ArrowUpRight (http://localhost:3000/node_modules/.vite/deps/lucide-react.js?v=5f2b2069:132:52)
+    at a (<anonymous>)
+    at div (<anonymous>)
+    at header (<anonymous>)
+    at Header (http://localhost:3000/app/components/HomeClient.tsx?t=1788897135715:85:26)
+    at main (<anonymous>)
+    at HomeClient (http://localhost:3000/app/components/HomeClient.tsx?t=1788897135715:302:15)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at PageInvoker [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=9a7d8080:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=9a7d8080:274:17)
+    at LayoutSegmentProvider (http://localhost:3000/node_modules/vinext/dist/shims/layout-segment-context.js?v=9a7d8080:41:34)
+    at RedirectErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:63:3)
+    at RedirectBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:97:29)
+    at AppRouterScrollTargetInner (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=9a7d8080:83:34)
+    at AppRouterScrollTarget (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=9a7d8080:135:34)
+    at NotFoundBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:185:3)
+    at NotFoundBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:221:29)
+    at Children (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=9a7d8080:305:17)
+    at body (<anonymous>)
+    at html (<anonymous>)
+    at RootLayout [Server] (<anonymous>)
+    at AppComponentDependencyBarrier [Server] (<anonymous>)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=9a7d8080:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=9a7d8080:274:17)
+    at LayoutSegmentProvider (http://localhost:3000/node_modules/vinext/dist/shims/layout-segment-context.js?v=9a7d8080:41:34)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:107:3)
+    at ErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:159:26)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:107:3)
+    at GlobalErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:167:32)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=9a7d8080:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=9a7d8080:274:17)
+    at NavigationCommitSignal (http://localhost:3000/node_modules/vinext/dist/server/app-browser-navigation-controller.js?v=9a7d8080:237:36)
+    at RedirectErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:63:3)
+    at RedirectBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:97:29)
+    at AppRouterRedirectBridge (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=9a7d8080:594:36)
+    at DevRecoveryBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:313:3)
+    at AppRouterScrollCommitProvider (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=9a7d8080:129:42)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:107:3)
+    at GlobalErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=9a7d8080:167:32)
+    at BrowserRoot (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=9a7d8080:624:24)
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+4:52:34 p. m. [vite] (client) [console.warn] GSAP target .experience-kicker, .experience-copy h2 not found. https://gsap.com
+4:52:34 p. m. [vite] (client) [console.warn] GSAP target  not found. https://gsap.com
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+4:52:56 p. m. [vite] (client) [console.error] [vite] Failed to reload /app/components/MedicalDigitalExperience.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+4:53:12 p. m. [vite] Internal server error: Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+      at runInRunnerObject (workers/runner-worker/index.js:107:3)
+      at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+      at null.<anonymous> (workers/runner-worker/index.js:354:24)
+      at maybeCaptureError (workers/runner-worker/index.js:51:10)
+4:53:12 p. m. [vite] Internal server error: Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+      at runInRunnerObject (workers/runner-worker/index.js:107:3)
+      at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+      at null.<anonymous> (workers/runner-worker/index.js:354:24)
+      at maybeCaptureError (workers/runner-worker/index.js:51:10)
+4:53:12 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+    at runInRunnerObject (workers/runner-worker/index.js:107:3)
+    at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+    at null.<anonymous> (workers/runner-worker/index.js:354:24)
+    at maybeCaptureError (workers/runner-worker/index.js:51:10)
+4:53:12 p. m. [vite] (client) [console.error] [vinext] RSC HMR error: TypeError: Failed to fetch
+    at applyRscHmrUpdate (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=d3f0d8c0:1527:94)
+    at async handleRscUpdate (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=d3f0d8c0:1532:5)
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+5:08:53 p. m. [vite] (client) [console.error] Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+5:08:53 p. m. [vite] (client) [console.error] Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+5:08:53 p. m. [vite] (client) [console.error] Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+5:08:53 p. m. [vite] (client) [console.error] TypeError: Cannot read properties of null (reading 'useRef')
+    at exports.useRef (http://localhost:3000/node_modules/.vite/deps/react-B35R_oEX.js?v=1b135a06:776:30)
+    at Image (http://localhost:3000/node_modules/.vite/deps/next_image.js?v=406f6151:2939:51)
+    at Object.react_stack_bottom_frame (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:12867:12)
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:4212:19)
+    at updateForwardRef (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:5395:16)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:6203:21)
+    at runWithFiberInDEV (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:850:66)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:8428:92)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:8324:37)
+    at renderRootSync (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:8308:6)
+5:08:53 p. m. [vite] (client) [console.error] The above error occurred in a React component:
+
+    at Image (http://localhost:3000/node_modules/.vite/deps/next_image.js?v=406f6151:2938:64)
+    at a (<anonymous>)
+    at Brand (<anonymous>)
+    at div (<anonymous>)
+    at header (<anonymous>)
+    at Header (http://localhost:3000/app/components/HomeClient.tsx?t=1788898124075:89:26)
+    at main (<anonymous>)
+    at HomeClient (http://localhost:3000/app/components/HomeClient.tsx?t=1788898124075:306:15)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at PageInvoker [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:274:17)
+    at LayoutSegmentProvider (http://localhost:3000/node_modules/vinext/dist/shims/layout-segment-context.js?v=d3f0d8c0:41:34)
+    at RedirectErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:63:3)
+    at RedirectBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:97:29)
+    at AppRouterScrollTargetInner (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=d3f0d8c0:83:34)
+    at AppRouterScrollTarget (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=d3f0d8c0:135:34)
+    at NotFoundBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:185:3)
+    at NotFoundBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:221:29)
+    at Children (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:305:17)
+    at body (<anonymous>)
+    at html (<anonymous>)
+    at RootLayout [Server] (<anonymous>)
+    at AppComponentDependencyBarrier [Server] (<anonymous>)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:274:17)
+    at LayoutSegmentProvider (http://localhost:3000/node_modules/vinext/dist/shims/layout-segment-context.js?v=d3f0d8c0:41:34)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:107:3)
+    at ErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:159:26)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:107:3)
+    at GlobalErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:167:32)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:274:17)
+    at NavigationCommitSignal (http://localhost:3000/node_modules/vinext/dist/server/app-browser-navigation-controller.js?v=d3f0d8c0:237:36)
+    at RedirectErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:63:3)
+    at RedirectBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:97:29)
+    at AppRouterRedirectBridge (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=d3f0d8c0:594:36)
+    at DevRecoveryBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:313:3)
+    at AppRouterScrollCommitProvider (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=d3f0d8c0:129:42)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:107:3)
+    at GlobalErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:167:32)
+    at BrowserRoot (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=d3f0d8c0:624:24)
+5:08:53 p. m. [vite] (client) [console.error] Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+5:08:53 p. m. [vite] (client) [console.error] TypeError: Cannot read properties of null (reading 'useRef')
+    at exports.useRef (http://localhost:3000/node_modules/.vite/deps/react-B35R_oEX.js?v=1b135a06:776:30)
+    at Image (http://localhost:3000/node_modules/.vite/deps/next_image.js?v=406f6151:2939:51)
+    at Object.react_stack_bottom_frame (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:12867:12)
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:4212:19)
+    at updateForwardRef (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:5395:16)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:6203:21)
+    at runWithFiberInDEV (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:850:66)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:8428:92)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:8324:37)
+    at renderRootSync (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=d3f0d8c0:8308:6)
+5:08:53 p. m. [vite] (client) [console.error] The above error occurred in a React component:
+
+    at Image (http://localhost:3000/node_modules/.vite/deps/next_image.js?v=406f6151:2938:64)
+    at a (<anonymous>)
+    at Brand (<anonymous>)
+    at div (<anonymous>)
+    at header (<anonymous>)
+    at Header (http://localhost:3000/app/components/HomeClient.tsx?t=1788898124075:89:26)
+    at main (<anonymous>)
+    at HomeClient (http://localhost:3000/app/components/HomeClient.tsx?t=1788898124075:306:15)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at PageInvoker [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:274:17)
+    at LayoutSegmentProvider (http://localhost:3000/node_modules/vinext/dist/shims/layout-segment-context.js?v=d3f0d8c0:41:34)
+    at RedirectErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:63:3)
+    at RedirectBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:97:29)
+    at AppRouterScrollTargetInner (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=d3f0d8c0:83:34)
+    at AppRouterScrollTarget (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=d3f0d8c0:135:34)
+    at NotFoundBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:185:3)
+    at NotFoundBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:221:29)
+    at Children (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:305:17)
+    at body (<anonymous>)
+    at html (<anonymous>)
+    at RootLayout [Server] (<anonymous>)
+    at AppComponentDependencyBarrier [Server] (<anonymous>)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:274:17)
+    at LayoutSegmentProvider (http://localhost:3000/node_modules/vinext/dist/shims/layout-segment-context.js?v=d3f0d8c0:41:34)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:107:3)
+    at ErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:159:26)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:107:3)
+    at GlobalErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:167:32)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=d3f0d8c0:274:17)
+    at NavigationCommitSignal (http://localhost:3000/node_modules/vinext/dist/server/app-browser-navigation-controller.js?v=d3f0d8c0:237:36)
+    at RedirectErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:63:3)
+    at RedirectBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:97:29)
+    at AppRouterRedirectBridge (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=d3f0d8c0:594:36)
+    at DevRecoveryBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:313:3)
+    at AppRouterScrollCommitProvider (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=d3f0d8c0:129:42)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:107:3)
+    at GlobalErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=d3f0d8c0:167:32)
+    at BrowserRoot (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=d3f0d8c0:624:24)
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+5:10:19 p. m. [vite] Internal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mUnexpected token
+ -  in app/components/HomeClient.tsx at 11437..11438
+
+  Plugin: vite:oxc
+  File: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/components/HomeClient.tsx
+      at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+      at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+      at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:10:19 p. m. [vite] Internal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mUnexpected token
+ -  in app/components/HomeClient.tsx at 11437..11438
+
+  Plugin: vite:oxc
+  File: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/components/HomeClient.tsx
+      at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+      at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+      at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:10:19 p. m. [vite] (client) [console.error] [vite] Failed to reload /app/components/HomeClient.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+5:10:19 p. m. [vite] (client) [console.error] [vite] Failed to reload /app/components/HomeClient.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+5:10:19 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+ -  in app/components/HomeClient.tsx at 11437..11438
+
+    at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+    at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+    at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+    at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:10:19 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+ -  in app/components/HomeClient.tsx at 11437..11438
+
+    at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+    at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+    at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+    at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:10:19 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+ -  in app/components/HomeClient.tsx at 11437..11438
+
+    at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+    at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+    at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+    at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:10:19 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+ -  in app/components/HomeClient.tsx at 11437..11438
+
+    at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+    at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+    at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+    at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:11:18 p. m. [vite] (client) [console.error] Received `true` for a non-boolean attribute `बेल`.
+
+If you want to write it to the DOM, pass a string instead: बेल="true" or बेल={value.toString()}.
+5:11:18 p. m. [vite] (client) [console.error] React does not recognize the `Matcher` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `matcher` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+5:11:18 p. m. [vite] (client) [console.error] Received `true` for a non-boolean attribute `बेल`.
+
+If you want to write it to the DOM, pass a string instead: बेल="true" or बेल={value.toString()}.
+5:11:18 p. m. [vite] (client) [console.error] React does not recognize the `Matcher` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `matcher` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+5:12:21 p. m. [vite] (client) [console.error] Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+5:12:21 p. m. [vite] (client) [console.error] Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+5:12:21 p. m. [vite] (client) [console.error] Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+5:12:21 p. m. [vite] (client) [console.error] TypeError: Cannot read properties of null (reading 'useContext')
+    at exports.useContext (http://localhost:3000/node_modules/.vite/deps/react-B35R_oEX.js?v=200d0d50:737:22)
+    at Link (http://localhost:3000/node_modules/.vite/deps/next_link.js?v=80a07279:729:50)
+    at Object.react_stack_bottom_frame (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:12867:12)
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:4212:19)
+    at updateForwardRef (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:5395:16)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:6203:21)
+    at runWithFiberInDEV (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:850:66)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:8428:92)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:8324:37)
+    at renderRootSync (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:8308:6)
+5:12:21 p. m. [vite] (client) [console.error] The above error occurred in a React component:
+
+    at Link (http://localhost:3000/node_modules/.vite/deps/next_link.js?v=80a07279:728:57)
+    at div (<anonymous>)
+    at div (<anonymous>)
+    at footer (<anonymous>)
+    at main (<anonymous>)
+    at HomeClient (http://localhost:3000/app/components/HomeClient.tsx?t=1788898331770:307:15)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at PageInvoker [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:274:17)
+    at LayoutSegmentProvider (http://localhost:3000/node_modules/vinext/dist/shims/layout-segment-context.js?v=1b135a06:41:34)
+    at RedirectErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:63:3)
+    at RedirectBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:97:29)
+    at AppRouterScrollTargetInner (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=1b135a06:83:34)
+    at AppRouterScrollTarget (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=1b135a06:135:34)
+    at NotFoundBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:185:3)
+    at NotFoundBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:221:29)
+    at Children (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:305:17)
+    at body (<anonymous>)
+    at html (<anonymous>)
+    at RootLayout [Server] (<anonymous>)
+    at AppComponentDependencyBarrier [Server] (<anonymous>)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:274:17)
+    at LayoutSegmentProvider (http://localhost:3000/node_modules/vinext/dist/shims/layout-segment-context.js?v=1b135a06:41:34)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:107:3)
+    at ErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:159:26)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:107:3)
+    at GlobalErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:167:32)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:274:17)
+    at NavigationCommitSignal (http://localhost:3000/node_modules/vinext/dist/server/app-browser-navigation-controller.js?v=1b135a06:237:36)
+    at RedirectErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:63:3)
+    at RedirectBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:97:29)
+    at AppRouterRedirectBridge (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=1b135a06:594:36)
+    at DevRecoveryBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:313:3)
+    at AppRouterScrollCommitProvider (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=1b135a06:129:42)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:107:3)
+    at GlobalErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:167:32)
+    at BrowserRoot (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=1b135a06:624:24)
+5:12:21 p. m. [vite] (client) [console.error] Invalid hook call. Hooks can only be called inside of the body of a function component. This could happen for one of the following reasons:
+1. You might have mismatching versions of React and the renderer (such as React DOM)
+2. You might be breaking the Rules of Hooks
+3. You might have more than one copy of React in the same app
+See https://react.dev/link/invalid-hook-call for tips about how to debug and fix this problem.
+5:12:21 p. m. [vite] (client) [console.error] TypeError: Cannot read properties of null (reading 'useContext')
+    at exports.useContext (http://localhost:3000/node_modules/.vite/deps/react-B35R_oEX.js?v=200d0d50:737:22)
+    at Link (http://localhost:3000/node_modules/.vite/deps/next_link.js?v=80a07279:729:50)
+    at Object.react_stack_bottom_frame (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:12867:12)
+    at renderWithHooks (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:4212:19)
+    at updateForwardRef (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:5395:16)
+    at beginWork (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:6203:21)
+    at runWithFiberInDEV (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:850:66)
+    at performUnitOfWork (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:8428:92)
+    at workLoopSync (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:8324:37)
+    at renderRootSync (http://localhost:3000/node_modules/.vite/deps/react-dom_client.js?v=1b135a06:8308:6)
+5:12:21 p. m. [vite] (client) [console.error] The above error occurred in a React component:
+
+    at Link (http://localhost:3000/node_modules/.vite/deps/next_link.js?v=80a07279:728:57)
+    at div (<anonymous>)
+    at div (<anonymous>)
+    at footer (<anonymous>)
+    at main (<anonymous>)
+    at HomeClient (http://localhost:3000/app/components/HomeClient.tsx?t=1788898331770:307:15)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at PageInvoker [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:274:17)
+    at LayoutSegmentProvider (http://localhost:3000/node_modules/vinext/dist/shims/layout-segment-context.js?v=1b135a06:41:34)
+    at RedirectErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:63:3)
+    at RedirectBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:97:29)
+    at AppRouterScrollTargetInner (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=1b135a06:83:34)
+    at AppRouterScrollTarget (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=1b135a06:135:34)
+    at NotFoundBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:185:3)
+    at NotFoundBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:221:29)
+    at Children (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:305:17)
+    at body (<anonymous>)
+    at html (<anonymous>)
+    at RootLayout [Server] (<anonymous>)
+    at AppComponentDependencyBarrier [Server] (<anonymous>)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:274:17)
+    at LayoutSegmentProvider (http://localhost:3000/node_modules/vinext/dist/shims/layout-segment-context.js?v=1b135a06:41:34)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:107:3)
+    at ErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:159:26)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:107:3)
+    at GlobalErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:167:32)
+    at AwaitAppRenderDependencies [Server] (<anonymous>)
+    at BfcacheSlotBoundary (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:191:32)
+    at Slot (http://localhost:3000/node_modules/vinext/dist/shims/slot.js?v=1b135a06:274:17)
+    at NavigationCommitSignal (http://localhost:3000/node_modules/vinext/dist/server/app-browser-navigation-controller.js?v=1b135a06:237:36)
+    at RedirectErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:63:3)
+    at RedirectBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:97:29)
+    at AppRouterRedirectBridge (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=1b135a06:594:36)
+    at DevRecoveryBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:313:3)
+    at AppRouterScrollCommitProvider (http://localhost:3000/node_modules/vinext/dist/shims/app-router-scroll.js?v=1b135a06:129:42)
+    at ErrorBoundaryInner (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:107:3)
+    at GlobalErrorBoundary (http://localhost:3000/node_modules/vinext/dist/shims/error-boundary.js?v=1b135a06:167:32)
+    at BrowserRoot (http://localhost:3000/node_modules/vinext/dist/server/app-browser-entry.js?v=1b135a06:624:24)
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+5:21:16 p. m. [vite] (client) [console.error] [vite] Failed to reload /app/components/HomeClient.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+5:21:16 p. m. [vite] (client) [console.error] [vite] Failed to reload /app/components/HomeClient.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+5:24:30 p. m. [vite] Internal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mUnexpected token
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m app/components/HomeClient.tsx:151:63 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m151 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m<[0m[38;5;249ma[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249mN[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mw[0m[38;5;249mh[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249ma[0m[38;5;249mp[0m[38;5;249mp[0m[38;5;249m-[0m[38;5;249mf[0m[38;5;249ml[0m[38;5;249mo[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249m"[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mf[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mh[0m[38;5;249mt[0m[38;5;249mt[0m[38;5;249mp[0m[38;5;249ms[0m[38;5;249m:[0m[38;5;249m/[0m[38;5;249m/[0m[38;5;249mw[0m[38;5;249ma[0m[38;5;249m.[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m/[0m[38;5;249m"[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249mt[0m" target="[38;5;249m_[0m[38;5;249mb[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249mk[0m[38;5;249m"[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mn[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mf[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m"[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mi[0m[38;5;249ma[0m[38;5;249m-[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249mb[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mC[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mW[0m[38;5;249mh[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249mA[0m[38;5;249mp[0m[38;5;249mp[0m[38;5;249m"[0m[38;5;249m>[0m[38;5;249m<[0m[38;5;249mM[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249mC[0m[38;5;249mi[0m[38;5;249mr[0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m/[0m[38;5;249m>[0m[38;5;249m<[0m[38;5;249m/[0m[38;5;249ma[0m[38;5;249m>[0m
+ [38;5;240m    │[0m                                                               ─────┬────  
+ [38;5;240m    │[0m                                                                    ╰────── 
+[38;5;246m─────╯[0m
+
+  Plugin: vite:oxc
+  File: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/components/HomeClient.tsx
+      at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+      at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+      at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:24:30 p. m. [vite] Internal server error: Transform failed with 1 error:
+
+[31m[PARSE_ERROR] [0mUnexpected token
+     [38;5;246m╭[0m[38;5;246m─[0m[38;5;246m[[0m app/components/HomeClient.tsx:151:63 [38;5;246m][0m
+     [38;5;246m│[0m
+ [38;5;246m151 │[0m [38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m [0m[38;5;249m<[0m[38;5;249ma[0m[38;5;249m [0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249mN[0m[38;5;249ma[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mw[0m[38;5;249mh[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249ma[0m[38;5;249mp[0m[38;5;249mp[0m[38;5;249m-[0m[38;5;249mf[0m[38;5;249ml[0m[38;5;249mo[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249m"[0m[38;5;249m [0m[38;5;249mh[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mf[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mh[0m[38;5;249mt[0m[38;5;249mt[0m[38;5;249mp[0m[38;5;249ms[0m[38;5;249m:[0m[38;5;249m/[0m[38;5;249m/[0m[38;5;249mw[0m[38;5;249ma[0m[38;5;249m.[0m[38;5;249mm[0m[38;5;249me[0m[38;5;249m/[0m[38;5;249m"[0m[38;5;249m [0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249mt[0m" target="[38;5;249m_[0m[38;5;249mb[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249mn[0m[38;5;249mk[0m[38;5;249m"[0m[38;5;249m [0m[38;5;249mr[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mn[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mf[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249mr[0m[38;5;249me[0m[38;5;249mr[0m[38;5;249m"[0m[38;5;249m [0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249mi[0m[38;5;249ma[0m[38;5;249m-[0m[38;5;249ml[0m[38;5;249ma[0m[38;5;249mb[0m[38;5;249me[0m[38;5;249ml[0m[38;5;249m=[0m[38;5;249m"[0m[38;5;249mC[0m[38;5;249mo[0m[38;5;249mn[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mc[0m[38;5;249mt[0m[38;5;249ma[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mp[0m[38;5;249mo[0m[38;5;249mr[0m[38;5;249m [0m[38;5;249mW[0m[38;5;249mh[0m[38;5;249ma[0m[38;5;249mt[0m[38;5;249ms[0m[38;5;249mA[0m[38;5;249mp[0m[38;5;249mp[0m[38;5;249m"[0m[38;5;249m>[0m[38;5;249m<[0m[38;5;249mM[0m[38;5;249me[0m[38;5;249ms[0m[38;5;249ms[0m[38;5;249ma[0m[38;5;249mg[0m[38;5;249me[0m[38;5;249mC[0m[38;5;249mi[0m[38;5;249mr[0m[38;5;249mc[0m[38;5;249ml[0m[38;5;249me[0m[38;5;249m [0m[38;5;249m/[0m[38;5;249m>[0m[38;5;249m<[0m[38;5;249m/[0m[38;5;249ma[0m[38;5;249m>[0m
+ [38;5;240m    │[0m                                                               ─────┬────  
+ [38;5;240m    │[0m                                                                    ╰────── 
+[38;5;246m─────╯[0m
+
+  Plugin: vite:oxc
+  File: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/components/HomeClient.tsx
+      at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+      at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+      at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+      at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:24:30 p. m. [vite] (client) [console.error] [vite] Failed to reload /app/components/HomeClient.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+5:24:30 p. m. [vite] (client) [console.error] [vite] Failed to reload /app/components/HomeClient.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+5:24:30 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+     ╭─[ app/components/HomeClient.tsx:151:63 ]
+     │
+ 151 │     <a className="whatsapp-float" href="https://wa.me/" target" target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp"><MessageCircle /></a>
+     │                                                               ─────┬────  
+     │                                                                    ╰────── 
+─────╯
+
+    at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+    at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+    at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+    at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:24:30 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+     ╭─[ app/components/HomeClient.tsx:151:63 ]
+     │
+ 151 │     <a className="whatsapp-float" href="https://wa.me/" target" target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp"><MessageCircle /></a>
+     │                                                               ─────┬────  
+     │                                                                    ╰────── 
+─────╯
+
+    at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+    at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+    at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+    at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:24:30 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+     ╭─[ app/components/HomeClient.tsx:151:63 ]
+     │
+ 151 │     <a className="whatsapp-float" href="https://wa.me/" target" target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp"><MessageCircle /></a>
+     │                                                               ─────┬────  
+     │                                                                    ╰────── 
+─────╯
+
+    at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+    at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+    at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+    at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:24:30 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Transform failed with 1 error:
+
+[PARSE_ERROR] Unexpected token
+     ╭─[ app/components/HomeClient.tsx:151:63 ]
+     │
+ 151 │     <a className="whatsapp-float" href="https://wa.me/" target" target="_blank" rel="noreferrer" aria-label="Contactar por WhatsApp"><MessageCircle /></a>
+     │                                                               ─────┬────  
+     │                                                                    ╰────── 
+─────╯
+
+    at transformWithOxc (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3339:19)
+    at TransformPluginContext.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:3410:26)
+    at EnvironmentPluginContainer.transform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:30271:51)
+    at async loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24532:26)
+5:25:42 p. m. [vite] (client) [console.error] [vite] Failed to reload /app/components/MedicalDigitalExperience.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+5:25:42 p. m. [vite] (client) [console.error] [vite] Failed to reload /app/components/MedicalDigitalExperience.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)
+5:26:14 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+    at loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24521:31)
+    at async MinimalPluginContext.hotUpdate (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/@vitejs/plugin-rsc/dist/plugin-Cbs9j6lP.js:956:8)
+    at async handleHMRUpdate (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:26768:29)
+    at async onHMRUpdate (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:26273:35)
+    at async onFileAddUnlink (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:26291:3)
+5:26:14 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+    at loadAndTransform (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:24521:31)
+    at async MinimalPluginContext.hotUpdate (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/@vitejs/plugin-rsc/dist/plugin-Cbs9j6lP.js:956:8)
+    at async handleHMRUpdate (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:26768:29)
+    at async onHMRUpdate (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:26273:35)
+    at async onFileAddUnlink (file:///C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno%20salud%20austral%20spa/node_modules/vite/dist/node/chunks/node.js:26291:3)
+5:26:14 p. m. [vite] Internal server error: Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+      at runInRunnerObject (workers/runner-worker/index.js:107:3)
+      at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+      at null.<anonymous> (workers/runner-worker/index.js:354:24)
+      at maybeCaptureError (workers/runner-worker/index.js:51:10)
+5:26:14 p. m. [vite] Internal server error: Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+      at runInRunnerObject (workers/runner-worker/index.js:107:3)
+      at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+      at null.<anonymous> (workers/runner-worker/index.js:354:24)
+      at maybeCaptureError (workers/runner-worker/index.js:51:10)
+5:26:14 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+    at runInRunnerObject (workers/runner-worker/index.js:107:3)
+    at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+    at null.<anonymous> (workers/runner-worker/index.js:354:24)
+    at maybeCaptureError (workers/runner-worker/index.js:51:10)
+5:26:14 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+    at runInRunnerObject (workers/runner-worker/index.js:107:3)
+    at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+    at null.<anonymous> (workers/runner-worker/index.js:354:24)
+    at maybeCaptureError (workers/runner-worker/index.js:51:10)
+5:26:14 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+    at runInRunnerObject (workers/runner-worker/index.js:107:3)
+    at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+    at null.<anonymous> (workers/runner-worker/index.js:354:24)
+    at maybeCaptureError (workers/runner-worker/index.js:51:10)
+5:26:14 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+    at runInRunnerObject (workers/runner-worker/index.js:107:3)
+    at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+    at null.<anonymous> (workers/runner-worker/index.js:354:24)
+    at maybeCaptureError (workers/runner-worker/index.js:51:10)
+5:28:22 p. m. [vite] Internal server error: Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+      at runInRunnerObject (workers/runner-worker/index.js:107:3)
+      at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+      at null.<anonymous> (workers/runner-worker/index.js:354:24)
+      at maybeCaptureError (workers/runner-worker/index.js:51:10)
+5:28:22 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+    at runInRunnerObject (workers/runner-worker/index.js:107:3)
+    at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+    at null.<anonymous> (workers/runner-worker/index.js:354:24)
+    at maybeCaptureError (workers/runner-worker/index.js:51:10)
+5:28:22 p. m. [vite] (client) [console.error] [vite] Internal Server Error
+Failed to load url /app/globals.css (resolved id: C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/globals.css) in C:/Users/sebas/OneDrive/Desktop/Programacion/Tecno salud austral spa/app/layout.tsx. Does the file exist?
+    at runInRunnerObject (workers/runner-worker/index.js:107:3)
+    at getWorkerEntryExport (workers/runner-worker/index.js:235:17)
+    at null.<anonymous> (workers/runner-worker/index.js:354:24)
+    at maybeCaptureError (workers/runner-worker/index.js:51:10)
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
+Detected multiple renderers concurrently rendering the same context provider. This is currently unsupported.
