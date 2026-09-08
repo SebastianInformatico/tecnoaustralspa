@@ -1518,6 +1518,224 @@ svg {
 .pellet-link {
   color: #c5a96f;
 }
+
+/* Quote document */
+.quote-document {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #e7edef;
+  color: var(--text);
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+.quote-toolbar {
+  display: flex;
+  width: min(900px, 100%);
+  margin: 0 auto 1rem;
+  align-items: center;
+  justify-content: space-between;
+  color: #426473;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.quote-toolbar button {
+  padding: 0.72rem 1rem;
+  background: var(--navy-dark);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+.quote-paper {
+  width: min(900px, 100%);
+  min-height: 1120px;
+  margin: 0 auto;
+  padding: 3.25rem 3.5rem 2rem;
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(8, 40, 61, 0.14);
+}
+.quote-document-header,
+.quote-intro,
+.quote-summary,
+.quote-terms,
+.quote-document-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.quote-document-header {
+  align-items: start;
+  padding-bottom: 2.2rem;
+  border-bottom: 3px solid var(--blue);
+}
+.quote-company {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.quote-company img {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+}
+.quote-company p {
+  margin: 0;
+  color: #66818d;
+  font-size: 0.7rem;
+}
+.quote-kicker,
+.quote-label {
+  color: #1684ad !important;
+  font-size: 0.62rem !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.14em;
+}
+.quote-meta {
+  min-width: 190px;
+  padding-top: 0.5rem;
+  text-align: right;
+}
+.quote-meta span {
+  display: block;
+  color: #1684ad;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+.quote-meta strong {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--navy-dark);
+  font-size: 1.2rem;
+}
+.quote-meta p,
+.quote-intro p,
+.quote-reference p,
+.quote-terms p {
+  margin: 0.25rem 0 0;
+  color: #667e88;
+  font-size: 0.72rem;
+}
+.quote-intro {
+  padding: 2.3rem 0;
+  border-bottom: 1px solid #d9e3e5;
+}
+.quote-intro h1 {
+  margin: 0.55rem 0 0.35rem;
+  color: var(--navy-dark);
+  font-size: 1.6rem;
+  font-weight: 650;
+  letter-spacing: -0.035em;
+}
+.quote-reference {
+  width: 38%;
+  padding-left: 1.5rem;
+  border-left: 1px solid #cbdde0;
+}
+.quote-status {
+  margin-top: 0.8rem !important;
+  color: #258567 !important;
+  font-weight: 700;
+}
+.quote-table-wrap {
+  margin-top: 2.25rem;
+}
+.quote-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.74rem;
+}
+.quote-table th {
+  padding: 0.75rem 0.65rem;
+  border-bottom: 2px solid var(--navy-dark);
+  color: #56727e;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-align: left;
+  text-transform: uppercase;
+}
+.quote-table th:nth-child(n + 3),
+.quote-table td:nth-child(n + 3) {
+  text-align: right;
+}
+.quote-table td {
+  padding: 1rem 0.65rem;
+  border-bottom: 1px solid #d9e3e5;
+  color: #3d5b68;
+  vertical-align: top;
+}
+.quote-table td strong,
+.quote-table td span {
+  display: block;
+}
+.quote-table td strong {
+  color: var(--navy-dark);
+  font-size: 0.78rem;
+}
+.quote-table td span {
+  max-width: 300px;
+  margin-top: 0.3rem;
+  color: #78909a;
+  font-size: 0.68rem;
+}
+.quote-code {
+  color: #1684ad !important;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+.quote-summary {
+  align-items: start;
+  padding: 2rem 0;
+}
+.quote-note {
+  max-width: 350px;
+}
+.quote-note p:last-child {
+  margin-top: 0.6rem;
+  color: #718792;
+  font-size: 0.72rem;
+  line-height: 1.6;
+}
+.quote-summary dl {
+  width: 260px;
+  margin: 0;
+}
+.quote-summary dl div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.45rem 0;
+  color: #667e88;
+  font-size: 0.72rem;
+}
+.quote-summary dt,
+.quote-summary dd {
+  margin: 0;
+}
+.quote-total {
+  margin-top: 0.5rem;
+  padding-top: 0.8rem !important;
+  border-top: 2px solid var(--navy-dark);
+  color: var(--navy-dark) !important;
+  font-size: 1rem !important;
+  font-weight: 800;
+}
+.quote-terms {
+  padding: 1.5rem 0;
+  border-top: 1px solid #d9e3e5;
+}
+.quote-terms > div {
+  max-width: 360px;
+}
+.quote-terms .quote-label {
+  margin-bottom: 0.55rem;
+}
+.quote-document-footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid #d9e3e5;
+  color: #7a929b;
+  font-size: 0.62rem;
+}
 .whatsapp-float {
   position: fixed;
   z-index: 30;
@@ -2357,5 +2575,68 @@ svg {
     clip-path: none !important;
     transform: none !important;
     animation: none !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .quote-document {
+    padding: 1rem;
+  }
+  .quote-paper {
+    min-height: auto;
+    padding: 1.5rem;
+  }
+  .quote-document-header,
+  .quote-intro,
+  .quote-summary,
+  .quote-terms {
+    flex-direction: column;
+  }
+  .quote-company img {
+    width: 86px;
+    height: 86px;
+  }
+  .quote-meta {
+    min-width: 0;
+    text-align: left;
+  }
+  .quote-reference {
+    width: 100%;
+    padding-left: 0;
+    border-top: 1px solid #cbdde0;
+    border-left: 0;
+    padding-top: 1rem;
+  }
+  .quote-table-wrap {
+    overflow-x: auto;
+  }
+  .quote-table {
+    min-width: 650px;
+  }
+  .quote-summary dl {
+    width: 100%;
+  }
+  .quote-document-footer {
+    margin-top: 1.5rem;
+  }
+}
+
+@media print {
+  @page {
+    size: letter;
+    margin: 0;
+  }
+  .quote-document {
+    padding: 0;
+    background: #fff;
+  }
+  .quote-toolbar {
+    display: none;
+  }
+  .quote-paper {
+    width: 100%;
+    min-height: 11in;
+    padding: 0.55in 0.65in 0.35in;
+    box-shadow: none;
   }
 }
