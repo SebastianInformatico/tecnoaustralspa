@@ -1563,8 +1563,8 @@ svg {
 }
 .quote-document-header {
   align-items: start;
-  padding-bottom: 2.2rem;
-  border-bottom: 3px solid var(--blue);
+  padding-bottom: 1.6rem;
+  border-bottom: 2px solid var(--blue);
 }
 .quote-company {
   display: flex;
@@ -1572,8 +1572,8 @@ svg {
   gap: 1rem;
 }
 .quote-company img {
-  width: 112px;
-  height: 112px;
+  width: 82px;
+  height: 82px;
   object-fit: contain;
 }
 .quote-company p {
@@ -1581,12 +1581,28 @@ svg {
   color: #66818d;
   font-size: 0.7rem;
 }
+.quote-actions {
+  display: flex;
+  gap: 0.55rem;
+}
 .quote-kicker,
 .quote-label {
   color: #1684ad !important;
   font-size: 0.62rem !important;
   font-weight: 800 !important;
   letter-spacing: 0.14em;
+}
+.quote-toolbar button:first-child {
+  background: transparent;
+  border: 1px solid #b8cbd0;
+  color: var(--navy-dark);
+}
+.quote-toolbar button svg {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 0.35rem;
+  vertical-align: -3px;
 }
 .quote-meta {
   min-width: 190px;
@@ -1606,8 +1622,6 @@ svg {
   color: var(--navy-dark);
   font-size: 1.2rem;
 }
-.quote-meta p,
-.quote-intro p,
 .quote-reference p,
 .quote-terms p {
   margin: 0.25rem 0 0;
@@ -2592,6 +2606,13 @@ svg {
   .quote-terms {
     flex-direction: column;
   }
+  .quote-actions {
+    width: 100%;
+  }
+  .quote-actions button {
+    flex: 1;
+    padding-inline: 0.55rem;
+  }
   .quote-company img {
     width: 86px;
     height: 86px;
@@ -2638,5 +2659,14 @@ svg {
     min-height: 11in;
     padding: 0.55in 0.65in 0.35in;
     box-shadow: none;
+  }
+  .quote-document-header,
+  .quote-intro,
+  .quote-summary,
+  .quote-terms {
+    break-inside: avoid;
+  }
+  .quote-table tr {
+    break-inside: avoid;
   }
 }

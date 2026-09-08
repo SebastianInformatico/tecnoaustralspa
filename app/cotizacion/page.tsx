@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { Download, Printer } from 'lucide-react';
 
 const items = [
   {
@@ -30,14 +31,28 @@ export default function QuotePage() {
   const subtotal = items.reduce((total, item) => total + item.quantity * item.price, 0);
   const tax = Math.round(subtotal * 0.19);
   const total = subtotal + tax;
+  const printDocument = (download = false) => {
+    const previousTitle = document.title;
+    document.title = 'Cotizacion-TecnoSalud-Austral-TSA-2026-001';
+    window.print();
+    if (!download) document.title = previousTitle;
+    window.setTimeout(() => {
+      document.title = previousTitle;
+    }, 1000);
+  };
 
   return (
     <main className="quote-document">
       <div className="quote-toolbar">
         <a href="/">Volver al sitio</a>
-        <button type="button" onClick={() => window.print()}>
-          Guardar como PDF
-        </button>
+        <div className="quote-actions">
+          <button type="button" onClick={() => printDocument()}>
+            <Printer aria-hidden="true" /> Imprimir
+          </button>
+          <button type="button" onClick={() => printDocument(true)}>
+            <Download aria-hidden="true" /> Descargar PDF
+          </button>
+        </div>
       </div>
       <article className="quote-paper">
         <header className="quote-document-header">
@@ -49,8 +64,8 @@ export default function QuotePage() {
               height={180}
             />
             <div>
-              <p className="quote-kicker">SOLUCIONES CARDIOLOGICAS</p>
-              <p>Equipamiento, accesorios e insumos para salud.</p>
+              <p className="quote-kicker">EQUIPAMIENTO CARDIOLÓGICO</p>
+              <p>Equipos, accesorios e insumos para instituciones de salud.</p>
             </div>
           </div>
           <div className="quote-meta">
