@@ -2642,6 +2642,62 @@ svg {
   }
 }
 
+@media (min-width: 761px) {
+  .quote-paper {
+    position: relative;
+    overflow: hidden;
+    border-top: 8px solid var(--navy-dark);
+  }
+  .quote-paper::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 7px;
+    background: var(--blue);
+    content: '';
+  }
+  .quote-document-header {
+    align-items: center;
+  }
+  .quote-company {
+    gap: 1.25rem;
+  }
+  .quote-company img {
+    width: 72px;
+    height: 72px;
+  }
+  .quote-meta {
+    padding: 0.9rem 1rem;
+    border-left: 4px solid #d7e9ed;
+    background: #f5f9f9;
+  }
+  .quote-intro {
+    padding: 2.8rem 0 2.35rem;
+  }
+  .quote-intro h1 {
+    font-size: 2rem;
+  }
+  .quote-reference {
+    padding: 0.4rem 0 0.4rem 2rem;
+  }
+  .quote-table th {
+    padding-block: 0.9rem;
+    background: #f3f7f7;
+  }
+  .quote-table td {
+    padding-block: 1.25rem;
+  }
+  .quote-note {
+    padding: 1rem 1.2rem;
+    border-left: 3px solid #42a891;
+    background: #f1f8f5;
+  }
+  .quote-terms {
+    padding-top: 1.8rem;
+  }
+}
+
 @media print {
   @page {
     size: letter;

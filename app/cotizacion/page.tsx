@@ -64,8 +64,8 @@ export default function QuotePage() {
               height={180}
             />
             <div>
-              <p className="quote-kicker">EQUIPAMIENTO CARDIOLÓGICO</p>
-              <p>Equipos, accesorios e insumos para instituciones de salud.</p>
+              <p className="quote-kicker">PROPUESTA COMERCIAL</p>
+              <p>Equipamiento cardiológico para una atención bien resuelta.</p>
             </div>
           </div>
           <div className="quote-meta">
@@ -78,15 +78,15 @@ export default function QuotePage() {
 
         <section className="quote-intro">
           <div>
-            <p className="quote-label">PREPARADA PARA</p>
+            <p className="quote-label">PARA NUESTRO CLIENTE</p>
             <h1>Centro Medico Austral</h1>
             <p>Atencion: Departamento de adquisiciones</p>
             <p>Puerto Montt, Chile</p>
           </div>
           <div className="quote-reference">
-            <p className="quote-label">REFERENCIA</p>
-            <p>Solicitud de equipamiento cardiologico para consulta y monitoreo.</p>
-            <p className="quote-status">● Propuesta comercial</p>
+            <p className="quote-label">SOBRE ESTA PROPUESTA</p>
+            <p>Una selección pensada para apoyar el trabajo de consulta y monitoreo.</p>
+            <p className="quote-status">● Disponible para revisar</p>
           </div>
         </section>
 
@@ -120,8 +120,8 @@ export default function QuotePage() {
 
         <section className="quote-summary">
           <div className="quote-note">
-            <p className="quote-label">NOTA COMERCIAL</p>
-            <p>Esta propuesta considera orientacion segun el uso previsto y disponibilidad al momento de confirmar la compra.</p>
+            <p className="quote-label">UN MENSAJE PARA TI</p>
+            <p>Armamos esta propuesta pensando en el uso diario. Si necesitas ajustar cantidades, accesorios o alternativas, conversemos.</p>
           </div>
           <dl>
             <div><dt>Subtotal neto</dt><dd>{formatCurrency(subtotal)}</dd></div>
