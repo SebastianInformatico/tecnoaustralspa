@@ -1,9 +1,12 @@
 'use client';
 
-import Image from 'next/image';
-import { Download, Printer } from 'lucide-react';
+import QuoteToolbar from '@/app/components/quote/QuoteToolbar';
+import QuoteHeader from '@/app/components/quote/QuoteHeader';
+import QuoteTable from '@/app/components/quote/QuoteTable';
+import type { QuoteItem } from '@/app/components/quote/types';
+import { COMPANY_INFO } from '@/lib/constants';
 
-const items = [
+const items: QuoteItem[] = [
   {
     code: 'ECG-120',
     name: 'Electrocardiografo digital',
@@ -31,6 +34,7 @@ export default function QuotePage() {
   const subtotal = items.reduce((total, item) => total + item.quantity * item.price, 0);
   const tax = Math.round(subtotal * 0.19);
   const total = subtotal + tax;
+
   const printDocument = (download = false) => {
     const previousTitle = document.title;
     document.title = 'Cotizacion-TecnoSalud-Austral-TSA-2026-001';
@@ -43,38 +47,14 @@ export default function QuotePage() {
 
   return (
     <main className="quote-document">
-      <div className="quote-toolbar">
-        <a href="/">Volver al sitio</a>
-        <div className="quote-actions">
-          <button type="button" onClick={() => printDocument()}>
-            <Printer aria-hidden="true" /> Imprimir
-          </button>
-          <button type="button" onClick={() => printDocument(true)}>
-            <Download aria-hidden="true" /> Descargar PDF
-          </button>
-        </div>
-      </div>
+      <QuoteToolbar onPrint={printDocument} />
+
       <article className="quote-paper">
-        <header className="quote-document-header">
-          <div className="quote-company">
-            <Image
-              src="/images/logo-tecno-salud-austral.png"
-              alt="Tecno Salud Austral SPA"
-              width={180}
-              height={180}
-            />
-            <div>
-              <p className="quote-kicker">PROPUESTA COMERCIAL</p>
-              <p>Equipamiento cardiológico para una atención bien resuelta.</p>
-            </div>
-          </div>
-          <div className="quote-meta">
-            <span>COTIZACION</span>
-            <strong>N° TSA-2026-001</strong>
-            <p>08 de septiembre de 2026</p>
-            <p>Vigencia: 15 dias</p>
-          </div>
-        </header>
+        <QuoteHeader
+          quoteNumber="TSA-2026-001"
+          date="08 de septiembre de 2026"
+          validity="15 dias"
+        />
 
         <section className="quote-intro">
           <div>
@@ -90,33 +70,7 @@ export default function QuotePage() {
           </div>
         </section>
 
-        <section className="quote-table-wrap">
-          <table className="quote-table">
-            <thead>
-              <tr>
-                <th>Codigo</th>
-                <th>Producto / servicio</th>
-                <th>Cant.</th>
-                <th>Precio unitario</th>
-                <th>Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              {items.map((item) => (
-                <tr key={item.code}>
-                  <td className="quote-code">{item.code}</td>
-                  <td>
-                    <strong>{item.name}</strong>
-                    <span>{item.detail}</span>
-                  </td>
-                  <td>{item.quantity}</td>
-                  <td>{formatCurrency(item.price)}</td>
-                  <td>{formatCurrency(item.quantity * item.price)}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
+        <QuoteTable items={items} formatCurrency={formatCurrency} />
 
         <section className="quote-summary">
           <div className="quote-note">
@@ -137,9 +91,9 @@ export default function QuotePage() {
           </div>
           <div>
             <p className="quote-label">CONTACTO COMERCIAL</p>
-            <p>Tecno Salud Austral SPA</p>
-            <p>Puerto Montt · Chile</p>
-            <p>ventas@tecnosaludaustral.cl · +56 9 0000 0000</p>
+            <p>{COMPANY_INFO.name}</p>
+            <p>{COMPANY_INFO.location}</p>
+            <p>{COMPANY_INFO.email} · {COMPANY_INFO.phoneDisplay}</p>
           </div>
         </section>
 
