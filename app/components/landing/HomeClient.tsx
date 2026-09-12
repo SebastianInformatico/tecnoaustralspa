@@ -84,7 +84,7 @@ const navLinks: [string, string][] = [
   ['Contacto', '#cotizar'],
 ];
 
-function Brand() {
+function Brand({ footer = false }: { footer?: boolean }) {
   return (
     <a
       href="#inicio"
@@ -93,7 +93,7 @@ function Brand() {
     >
       <Image
         className="brand-logo"
-        src="/images/logo-tecno-salud-austral.png"
+        src={footer ? '/images/logo-tecno-salud-austral-transparent.png' : '/images/logo-tecno-salud-austral.png'}
         alt="Tecno Salud Austral SPA"
         width={180}
         height={82}
@@ -571,7 +571,7 @@ export default function HomeClient() {
       <footer id="contacto" className="footer">
         <div className="shell footer-main">
           <div>
-            <Brand />
+            <Brand footer />
           </div>
           <div className="footer-nav">
             <p>Secciones</p>
