@@ -570,8 +570,10 @@ export default function HomeClient() {
 
       <footer id="contacto" className="footer">
         <div className="shell footer-main">
-          <div>
-            <Brand />
+          <div className="footer-ecg-brand" aria-label="Suministro clínico activo">
+            <svg viewBox="0 0 320 72" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 38h72l14-1 15-20 17 39 18-55 21 58 18-28 14 8h64l14-1 15-17 17 35 18-24 16 7h7" />
+            </svg>
           </div>
           <div className="footer-nav">
             <p>Secciones</p>
