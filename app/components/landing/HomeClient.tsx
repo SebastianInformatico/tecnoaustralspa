@@ -1,6 +1,5 @@
 'use client';
 
-import type { SyntheticEvent } from 'react';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -188,7 +187,10 @@ function Header() {
 
 export default function HomeClient() {
   const root = useRef<HTMLElement>(null);
+  const loadedAt = useRef(Date.now());
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
   useLayoutEffect(() => {
     if (!root.current) return;
@@ -260,9 +262,28 @@ export default function HomeClient() {
     };
   }, []);
 
-  const submit = (event: SyntheticEvent<HTMLFormElement>) => {
+  const submit = async (event: { preventDefault: () => void; currentTarget: HTMLFormElement }) => {
     event.preventDefault();
-    setSent(true);
+    setSending(true);
+    setError('');
+    const form = event.currentTarget;
+    const data = Object.fromEntries(new FormData(form).entries());
+
+    try {
+      const response = await fetch('/api/cotizacion', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json().catch(() => null) as { error?: string } | null;
+      if (!response.ok) throw new Error(result?.error || 'No fue posible enviar la solicitud.');
+      setSent(true);
+      form.reset();
+    } catch (submissionError) {
+      setError(submissionError instanceof Error ? submissionError.message : 'No fue posible enviar la solicitud.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -491,6 +512,27 @@ export default function HomeClient() {
               </output>
             ) : (
               <>
+                <input type="hidden" name="ts" value={loadedAt.current} readOnly />
+                <div
+                  aria-hidden="true"
+                  style={{
+                    position: 'absolute',
+                    left: '-9999px',
+                    width: '1px',
+                    height: '1px',
+                    overflow: 'hidden',
+                  }}
+                >
+                  <label>
+                    No completar este campo
+                    <input
+                      type="text"
+                      name="sitio_web"
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </label>
+                </div>
                 <div className="form-split">
                   <label>
                     Nombre
@@ -559,8 +601,9 @@ export default function HomeClient() {
                     placeholder="Uso previsto, cantidad u otra información relevante"
                   />
                 </label>
-                <button className="button button-dark" type="submit">
-                  Enviar solicitud <ArrowUpRight />
+                {error && <p role="alert" className="form-error">{error}</p>}
+                <button className="button button-dark" type="submit" disabled={sending}>
+                  {sending ? 'Enviando…' : 'Enviar solicitud'} <ArrowUpRight />
                 </button>
               </>
             )}
