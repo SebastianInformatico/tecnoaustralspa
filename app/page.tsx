@@ -3,16 +3,33 @@ import Link from 'next/link';
 import { MessageCircle } from 'lucide-react';
 import SiteFrame from './components/site/SiteFrame';
 import ProductCard from './components/catalog/ProductCard';
-import { PRODUCT_LINES, getLine } from '@/lib/catalog';
+import { FAMILIES, getLine, linesByFamily } from '@/lib/catalog';
 import { SITE, whatsappUrl } from '@/lib/site';
 
-const FEATURED = ['electrocardiografos', 'holter-ecg', 'monitores', 'electrodos-y-cables'];
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalBusiness',
+  name: SITE.name,
+  url: SITE.url,
+  email: SITE.email,
+  logo: `${SITE.url}/images/logo-tecno-salud-austral.png`,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Pje. Canal Trinidad 2, Villa Guarello',
+    addressLocality: SITE.city,
+    addressRegion: 'Los Lagos',
+    addressCountry: 'CL',
+  },
+  areaServed: 'CL',
+};
 
 export default function HomePage() {
   const ecg = getLine('electrocardiografos')!;
 
   return (
     <SiteFrame>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} />
+
       <section className="shell home-top">
         <div className="home-banner">
           <div className="home-banner-text">
@@ -49,44 +66,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="shell block">
-        <div className="block-head">
-          <h2>Categorías</h2>
-          <Link href="/productos">Ver catálogo</Link>
-        </div>
-        <ul className="category-tiles">
-          {PRODUCT_LINES.map((line) => (
-            <li key={line.slug}>
-              <Link href={`/productos/${line.slug}`}>
-                <span className="category-tile-img">
-                  <Image
-                    src={line.image}
-                    alt=""
-                    fill
-                    sizes="160px"
-                    className={`fit-${line.imageFit}`}
-                    style={line.imagePosition ? { objectPosition: line.imagePosition } : undefined}
-                  />
-                </span>
-                {line.navLabel}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="shell block">
-        <div className="block-head">
-          <h2>Productos más cotizados</h2>
-          <Link href="/productos">Ver todos</Link>
-        </div>
-        <div className="product-grid product-grid--4">
-          {FEATURED.map((slug) => {
-            const line = getLine(slug);
-            return line ? <ProductCard key={slug} line={line} /> : null;
-          })}
-        </div>
-      </section>
+      {FAMILIES.map((family) => {
+        const lines = linesByFamily(family.id);
+        return (
+          <section key={family.id} className="shell block">
+            <div className="block-head">
+              <h2>{family.name}</h2>
+              <Link href={`/productos?familia=${family.id}`}>Ver todo</Link>
+            </div>
+            <div className="product-grid product-grid--4">
+              {lines.map((line) => (
+                <ProductCard key={line.slug} line={line} />
+              ))}
+              {lines.length % 4 !== 0 && (
+                <Link href="/cotizar" className="product-help-card">
+                  <strong>¿No encuentras lo que buscas?</strong>
+                  <span>
+                    Trabajamos más productos de los que aparecen en el catálogo. Indícanos marca y modelo de tu equipo y
+                    lo buscamos.
+                  </span>
+                  <em>Solicitar cotización</em>
+                </Link>
+              )}
+            </div>
+          </section>
+        );
+      })}
 
       <section className="shell block">
         <div className="info-row">

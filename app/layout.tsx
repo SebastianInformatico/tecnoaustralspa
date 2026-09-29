@@ -23,7 +23,13 @@ export const metadata: Metadata = {
     locale: 'es_CL',
     images: ['/images/logo-tecno-salud-austral.png'],
   },
-  icons: { icon: '/favicon.svg' },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-32.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export const viewport: Viewport = {

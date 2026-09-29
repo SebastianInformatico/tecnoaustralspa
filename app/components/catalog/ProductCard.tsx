@@ -22,7 +22,7 @@ export default function ProductCard({ line }: { line: ProductLine }) {
         <h3>
           <Link href={href}>{line.name}</Link>
         </h3>
-        <p className="product-card-sku">Cód. {line.code}</p>
+        <p className="product-card-summary">{line.summary}</p>
         <p className="product-card-price">Precio a cotizar</p>
         <AddToQuoteButton slug={line.slug} name={line.name} variant="compact" />
       </div>

@@ -59,9 +59,14 @@ export default async function ProductLinePage({ params }: { params: Promise<Para
 
           <div className="product-detail-info">
             <p className="product-detail-meta">
-              Código: <strong>{line.code}</strong> · Categoría: <strong>{family.name}</strong>
+              Categoría: <strong>{family.name}</strong>
             </p>
-            <p className="product-detail-summary">{line.description}</p>
+            <p className="product-detail-summary">{line.summary}</p>
+            <ul className="product-detail-uses">
+              {line.settings.map((setting) => (
+                <li key={setting}>{setting}</li>
+              ))}
+            </ul>
             <ProductBuyBox slug={line.slug} name={line.name} />
           </div>
         </div>
@@ -79,17 +84,6 @@ export default async function ProductLinePage({ params }: { params: Promise<Para
                     las opciones con su ficha técnica.
                   </p>
                 </>
-              ),
-            },
-            {
-              id: 'usos',
-              label: 'Usos',
-              content: (
-                <ul className="bullet-list">
-                  {line.settings.map((setting) => (
-                    <li key={setting}>{setting}</li>
-                  ))}
-                </ul>
               ),
             },
             {

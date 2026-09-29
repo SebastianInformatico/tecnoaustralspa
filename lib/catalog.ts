@@ -4,7 +4,7 @@
  * la página /productos, su ficha y el formulario de cotización se generan solos.
  */
 
-export type FamilyId = 'diagnostico' | 'monitoreo' | 'insumos';
+export type FamilyId = 'equipos' | 'insumos';
 
 export interface Family {
   id: FamilyId;
@@ -15,6 +15,7 @@ export interface Family {
 
 export interface ProductLine {
   slug: string;
+  /** Código interno: aparece solo en el correo de cotización, no en el sitio. */
   code: string;
   name: string;
   /** Nombre corto para la barra de categorías. */
@@ -38,22 +39,16 @@ export interface ProductLine {
 
 export const FAMILIES: Family[] = [
   {
-    id: 'diagnostico',
-    name: 'Diagnóstico ECG',
-    short: 'Diagnóstico',
-    description: 'Equipos para el registro electrocardiográfico en consulta, urgencia y evaluación preventiva.',
-  },
-  {
-    id: 'monitoreo',
-    name: 'Monitoreo',
-    short: 'Monitoreo',
-    description: 'Registro ambulatorio y vigilancia continua de parámetros del paciente.',
+    id: 'equipos',
+    name: 'Equipos médicos',
+    short: 'Equipos',
+    description: 'Electrocardiógrafos, Holter y monitores de paciente.',
   },
   {
     id: 'insumos',
     name: 'Insumos y accesorios',
     short: 'Insumos',
-    description: 'Consumibles y repuestos para que los equipos sigan operando todos los días.',
+    description: 'Electrodos, cables, manguitos, sensores y consumibles para equipos.',
   },
 ];
 
@@ -63,7 +58,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     code: 'ECG',
     name: 'Electrocardiógrafos',
     navLabel: 'Electrocardiógrafos',
-    family: 'diagnostico',
+    family: 'equipos',
     summary: 'Registro ECG en reposo para consulta, urgencia y chequeo preventivo.',
     description:
       'Equipos para obtener el trazado electrocardiográfico del paciente en reposo, con impresión o respaldo digital según el modelo. Te ayudamos a elegir el número de canales y el formato que calzan con tu flujo de atención.',
@@ -83,7 +78,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     code: 'H-ECG',
     name: 'Holter ECG',
     navLabel: 'Holter ECG',
-    family: 'monitoreo',
+    family: 'equipos',
     summary: 'Registro prolongado de la actividad cardíaca durante la rutina del paciente.',
     description:
       'Grabadoras portátiles que registran el ritmo cardíaco durante 24 horas o más mientras el paciente realiza sus actividades habituales. Incluyen software de análisis según el modelo.',
@@ -103,7 +98,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     code: 'MAPA',
     name: 'Holter de presión',
     navLabel: 'Holter de presión',
-    family: 'monitoreo',
+    family: 'equipos',
     summary: 'Monitoreo ambulatorio de presión arterial (MAPA) para revisión clínica.',
     description:
       'Equipos que miden la presión arterial en intervalos programados durante el día y la noche, para evaluar el comportamiento real del paciente fuera de la consulta.',
@@ -122,7 +117,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     code: 'MON',
     name: 'Monitores de paciente',
     navLabel: 'Monitores',
-    family: 'monitoreo',
+    family: 'equipos',
     summary: 'Visualización continua de signos vitales en entornos de atención.',
     description:
       'Monitores multiparámetro para seguir en tiempo real parámetros como ECG, SpO₂, presión no invasiva y temperatura, según la configuración del equipo.',
