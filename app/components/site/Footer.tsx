@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Brand from './Brand';
 import ServiceBar from './ServiceBar';
+import SocialLinks from './SocialLinks';
 import { PRODUCT_LINES } from '@/lib/catalog';
 import { SITE, whatsappUrl } from '@/lib/site';
 
@@ -16,6 +17,7 @@ export default function Footer() {
               Venta de equipos de cardiología, monitoreo e insumos clínicos para profesionales, clínicas e instituciones
               de salud.
             </p>
+            <SocialLinks className="social-links--footer" />
           </div>
           <div className="footer-col">
             <h2>Productos</h2>
@@ -66,7 +68,7 @@ export default function Footer() {
               <dt>WhatsApp</dt>
               <dd>
                 <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
-                  Escribir a ventas
+                  {SITE.phoneDisplay}
                 </a>
               </dd>
             </dl>

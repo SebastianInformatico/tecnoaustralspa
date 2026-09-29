@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { MessageCircle } from 'lucide-react';
+import { WhatsAppIcon } from './components/site/BrandIcons';
 import SiteFrame from './components/site/SiteFrame';
 import ProductCard from './components/catalog/ProductCard';
 import { FAMILIES, getLine, linesByFamily } from '@/lib/catalog';
@@ -43,7 +43,7 @@ export default function HomePage() {
                 Ver productos
               </Link>
               <a className="button button-whatsapp" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
-                <MessageCircle aria-hidden="true" /> Cotizar por WhatsApp
+                <WhatsAppIcon aria-hidden="true" /> Cotizar por WhatsApp
               </a>
             </div>
           </div>
@@ -55,7 +55,7 @@ export default function HomePage() {
         <div className="home-promos">
           <Link href="/contacto" className="promo-box">
             <strong>Compras institucionales</strong>
-            <span>Cotización formal para clínicas, CESFAM, hospitales y licitaciones.</span>
+            <span>Cotización formal para clínicas, CESFAM y hospitales.</span>
             <em>Escríbenos</em>
           </Link>
           <Link href="/productos?familia=insumos" className="promo-box promo-box--alt">

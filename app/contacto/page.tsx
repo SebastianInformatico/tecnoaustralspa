@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { Mail, MapPin, MessageCircle } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
+import { WhatsAppIcon } from '../components/site/BrandIcons';
 import SiteFrame from '../components/site/SiteFrame';
 import PageIntro from '../components/site/PageIntro';
 import QuoteRequest from '../components/quote/QuoteRequest';
@@ -22,7 +23,7 @@ export default function ContactPage() {
         <div className="shell contact-layout">
           <div className="contact-channels">
             <a className="channel-card" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
-              <MessageCircle aria-hidden="true" />
+              <WhatsAppIcon aria-hidden="true" />
               <div>
                 <h2>WhatsApp</h2>
                 <p>La vía más rápida para consultas y seguimiento de pedidos.</p>
@@ -33,7 +34,7 @@ export default function ContactPage() {
               <Mail aria-hidden="true" />
               <div>
                 <h2>Correo</h2>
-                <p>Para enviar órdenes de compra, bases de licitación o fichas técnicas.</p>
+                <p>Para enviar órdenes de compra o solicitar fichas técnicas.</p>
                 <span className="channel-value">{SITE.email}</span>
               </div>
             </a>

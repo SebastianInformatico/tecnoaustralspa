@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ClipboardList, Menu, MessageCircle, Search, X } from 'lucide-react';
+import { ClipboardList, Menu, Search, X } from 'lucide-react';
+import { WhatsAppIcon } from './BrandIcons';
 import Brand from './Brand';
+import SocialLinks from './SocialLinks';
 import { PRODUCT_LINES } from '@/lib/catalog';
 import { SITE, whatsappUrl } from '@/lib/site';
 import { useQuoteList } from '@/lib/quote-list';
@@ -33,6 +35,7 @@ export default function Header() {
             <Link href="/nosotros">Nosotros</Link>
             <Link href="/contacto">Contacto</Link>
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+            <SocialLinks className="social-links--topbar" />
           </nav>
         </div>
       </div>
@@ -63,10 +66,10 @@ export default function Header() {
 
         <div className="header-actions">
           <a className="header-whatsapp" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
-            <MessageCircle aria-hidden="true" />
+            <WhatsAppIcon aria-hidden="true" />
             <span>
-              <small>Ventas</small>
-              WhatsApp
+              <small>Ventas por WhatsApp</small>
+              {SITE.phoneDisplay}
             </span>
           </a>
           <Link href="/cotizar" className="header-quote" aria-label={`Mi cotización, ${count} productos`}>
@@ -132,7 +135,7 @@ export default function Header() {
               </li>
             </ul>
             <a className="button button-whatsapp button-block" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
-              <MessageCircle aria-hidden="true" /> Escribir por WhatsApp
+              <WhatsAppIcon aria-hidden="true" /> Escribir por WhatsApp
             </a>
           </div>
         </div>

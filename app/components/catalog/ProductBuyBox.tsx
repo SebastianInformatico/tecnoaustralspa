@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { MessageCircle, Minus, Plus } from 'lucide-react';
+import { Minus, Plus } from 'lucide-react';
+import { WhatsAppIcon } from '../site/BrandIcons';
 import AddToQuoteButton from './AddToQuoteButton';
 import { useQuoteList } from '@/lib/quote-list';
 import { whatsappUrl } from '@/lib/site';
@@ -51,7 +52,7 @@ export default function ProductBuyBox({ slug, name }: { slug: string; name: stri
         target="_blank"
         rel="noopener noreferrer"
       >
-        <MessageCircle aria-hidden="true" /> Consultar por WhatsApp
+        <WhatsAppIcon aria-hidden="true" /> Consultar por WhatsApp
       </a>
     </div>
   );

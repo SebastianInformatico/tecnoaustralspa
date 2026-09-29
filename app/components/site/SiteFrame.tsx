@@ -1,6 +1,6 @@
-import { MessageCircle } from 'lucide-react';
 import Header from './Header';
 import Footer from './Footer';
+import { WhatsAppIcon } from './BrandIcons';
 import { whatsappUrl } from '@/lib/site';
 
 /** Estructura común de todas las páginas públicas: header, contenido, footer. */
@@ -20,7 +20,7 @@ export default function SiteFrame({ children }: { children: React.ReactNode }) {
         rel="noopener noreferrer"
         aria-label="Escribir por WhatsApp"
       >
-        <MessageCircle aria-hidden="true" />
+        <WhatsAppIcon aria-hidden="true" />
       </a>
     </>
   );

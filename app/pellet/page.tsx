@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { MessageCircle } from 'lucide-react';
+import { WhatsAppIcon } from '../components/site/BrandIcons';
 import SiteFrame from '../components/site/SiteFrame';
 import PageIntro from '../components/site/PageIntro';
 import { whatsappUrl } from '@/lib/site';
@@ -33,7 +33,7 @@ export default function PelletPage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle aria-hidden="true" /> Consultar por WhatsApp
+              <WhatsAppIcon aria-hidden="true" /> Consultar por WhatsApp
             </a>
           </aside>
         </div>

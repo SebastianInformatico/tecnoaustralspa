@@ -20,6 +20,7 @@
 }
 .topbar nav {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 .topbar a:hover {
@@ -312,6 +313,50 @@
 .service-item span {
   color: var(--muted);
   font-size: 13px;
+}
+
+/* ─── Redes sociales ─────────────────────────────────────── */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.social-links a,
+.social-links span {
+  display: grid;
+  place-items: center;
+}
+.social-links svg {
+  width: 16px;
+  height: 16px;
+}
+.social-links--topbar {
+  gap: 12px;
+  padding-left: 16px;
+  border-left: 1px solid var(--line-dark);
+}
+.social-links--topbar a:hover {
+  color: var(--brand);
+}
+.site-footer .social-links--footer {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+.social-links--footer a,
+.social-links--footer span {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.social-links--footer a:hover {
+  background: var(--brand);
+}
+.social-links--footer svg {
+  width: 18px;
+  height: 18px;
 }
 
 /* ─── Footer ─────────────────────────────────────────────── */
