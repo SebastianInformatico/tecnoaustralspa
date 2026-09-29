@@ -1,11 +1,9 @@
 import Link from 'next/link';
-import { Building2, FileText, Truck } from 'lucide-react';
 import SiteFrame from './components/site/SiteFrame';
 import HeroCarousel from './components/home/HeroCarousel';
+import HeroBadges from './components/home/HeroBadges';
 import SectionTitle from './components/site/SectionTitle';
-import IconBoxes from './components/site/IconBoxes';
 import CtaBand from './components/site/CtaBand';
-import { WhatsAppIcon } from './components/site/BrandIcons';
 import ProductCard from './components/catalog/ProductCard';
 import { linesByFamily } from '@/lib/catalog';
 import { SITE } from '@/lib/site';
@@ -28,13 +26,6 @@ const organizationJsonLd = {
   areaServed: 'CL',
 };
 
-const SERVICES = [
-  { icon: Truck, title: 'Despacho a todo Chile', text: `Enviamos desde ${SITE.city} a cualquier región del país.` },
-  { icon: FileText, title: 'Cotización formal', text: 'Te respondemos por correo con valores y disponibilidad.' },
-  { icon: Building2, title: 'Compras institucionales', text: 'Atendemos clínicas, CESFAM y hospitales.' },
-  { icon: WhatsAppIcon, title: 'Atención por WhatsApp', text: `Escríbenos al ${SITE.phoneDisplay}.` },
-];
-
 const STEPS = [
   { title: 'Elige tus productos', text: 'Agrega a tu cotización los equipos e insumos que necesitas.' },
   { title: 'Envía tus datos', text: 'Indica tu institución, la ciudad de despacho y cualquier detalle útil.' },
@@ -51,11 +42,7 @@ export default function HomePage() {
 
       <HeroCarousel />
 
-      <section className="section">
-        <div className="shell">
-          <IconBoxes items={SERVICES} />
-        </div>
-      </section>
+      <HeroBadges />
 
       <section className="section">
         <div className="shell">

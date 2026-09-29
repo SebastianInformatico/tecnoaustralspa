@@ -1,10 +1,18 @@
 import type { Metadata, Viewport } from 'next';
-import { Open_Sans } from 'next/font/google';
+import { Open_Sans, Poppins } from 'next/font/google';
 import './globals.css';
 
 const openSans = Open_Sans({
   variable: '--font-sans',
   subsets: ['latin'],
+  display: 'swap',
+});
+
+const poppins = Poppins({
+  variable: '--font-heading',
+  subsets: ['latin'],
+  weight: ['500', '600', '700', '800'],
+  style: ['normal', 'italic'],
   display: 'swap',
 });
 
@@ -39,7 +47,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es-CL">
-      <body className={openSans.variable}>{children}</body>
+      <body className={`${openSans.variable} ${poppins.variable}`}>{children}</body>
     </html>
   );
 }

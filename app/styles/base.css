@@ -15,6 +15,7 @@
   --danger: #c0392b;
   --radius: 6px;
   --font: var(--font-sans, 'Open Sans'), 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-title: var(--font-heading, 'Poppins'), var(--font);
 
   /* Compatibilidad con el documento /cotizacion */
   --navy-dark: #081a31;
@@ -52,6 +53,7 @@ h2,
 h3 {
   margin: 0;
   color: var(--text);
+  font-family: var(--font-title);
   font-weight: 700;
   line-height: 1.25;
 }
@@ -174,6 +176,24 @@ ol {
 }
 .button-whatsapp:hover {
   background: var(--whatsapp-dark);
+}
+.button-light {
+  background: #fff;
+  color: var(--navy);
+}
+.button-light:hover {
+  background: #e8eef6;
+}
+.button-light svg {
+  color: var(--whatsapp);
+}
+.button-outline-light {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+.button-outline-light:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.1);
 }
 .button-block {
   width: 100%;
