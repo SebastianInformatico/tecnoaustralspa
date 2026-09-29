@@ -35,6 +35,9 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: true });
   }
 
+  // "contacto" para el formulario de /contacto; por defecto es una cotización.
+  const isContact = textValue(body?.tipo) === 'contacto';
+
   const fields = {
     nombre: textValue(body?.nombre),
     empresa: textValue(body?.empresa),
@@ -97,7 +100,7 @@ export async function POST(request: NextRequest) {
       <div style="max-width:760px;margin:auto;background:#fff;border:1px solid #c8dff1;border-radius:14px;overflow:hidden">
         <div style="padding:24px 28px;border-bottom:4px solid #1386d5;display:flex;align-items:center;justify-content:space-between;gap:20px">
           <img src="${logoUrl}" alt="Tecno Salud Austral SPA" width="260" style="max-width:55%;height:auto" />
-          <div style="text-align:right;color:#173f76"><strong style="font-size:21px">COTIZACIÓN PROVISIONAL</strong><br />N.° ${quoteNumber}<br />Fecha: ${quoteDate}</div>
+          <div style="text-align:right;color:#173f76"><strong style="font-size:21px">${isContact ? 'CONSULTA WEB' : 'COTIZACIÓN PROVISIONAL'}</strong><br />N.° ${quoteNumber}<br />Fecha: ${quoteDate}</div>
         </div>
         <div style="padding:24px 28px">
           <h2 style="margin:0 0 16px;color:#123b70">Datos del cliente</h2>
@@ -108,7 +111,7 @@ export async function POST(request: NextRequest) {
             <tr><td style="padding:9px 0;border-bottom:1px solid #dceaf5"><b>Correo</b></td><td style="padding:9px 0;border-bottom:1px solid #dceaf5">${escapeHtml(fields.correo)}</td></tr>
             ${fields.ciudad ? `<tr><td style="padding:9px 0;border-bottom:1px solid #dceaf5"><b>Ciudad de despacho</b></td><td style="padding:9px 0;border-bottom:1px solid #dceaf5">${escapeHtml(fields.ciudad)}</td></tr>` : ''}
           </table>
-          <h2 style="margin:28px 0 12px;color:#123b70">Detalle referencial</h2>
+          <h2 style="margin:28px 0 12px;color:#123b70">${isContact ? 'Consulta' : 'Detalle referencial'}</h2>
           ${items.length > 0 ? `
           <table style="width:100%;border-collapse:collapse;border:1px solid #c8dff1">
             <thead><tr style="background:#e4f1fb"><th style="padding:12px;text-align:left">Código</th><th style="padding:12px;text-align:left">Producto</th><th style="padding:12px;text-align:center">Cantidad</th><th style="padding:12px;text-align:right">Valor</th></tr></thead>
@@ -119,7 +122,7 @@ export async function POST(request: NextRequest) {
             <thead><tr style="background:#e4f1fb"><th style="padding:12px;text-align:left">Producto de interés</th><th style="padding:12px;text-align:left">Observaciones</th><th style="padding:12px;text-align:right">Valor</th></tr></thead>
             <tbody><tr><td style="padding:14px;border-top:1px solid #c8dff1">${escapeHtml(fields.producto)}</td><td style="padding:14px;border-top:1px solid #c8dff1">${escapeHtml(fields.mensaje) || 'Sin observaciones adicionales'}</td><td style="padding:14px;border-top:1px solid #c8dff1;text-align:right">Por definir</td></tr></tbody>
           </table>`}
-          <div style="margin-top:24px;padding:16px;background:#eef7fd;border-radius:10px;color:#345575"><b>Condiciones comerciales</b><br />Cotización preliminar sujeta a confirmación de productos, cantidades, disponibilidad, despacho y valores. Vigencia referencial: 7 días hábiles.</div>
+          ${isContact ? '' : '<div style="margin-top:24px;padding:16px;background:#eef7fd;border-radius:10px;color:#345575"><b>Condiciones comerciales</b><br />Cotización preliminar sujeta a confirmación de productos, cantidades, disponibilidad, despacho y valores. Vigencia referencial: 7 días hábiles.</div>'}
         </div>
         <div style="padding:18px 28px;background:#0e72bd;color:#fff;font-size:13px">Emitido por Tecno Salud Austral SPA · <a href="https://tecnosaludaustral.cl/" style="color:#fff">tecnosaludaustral.cl</a></div>
       </div>
@@ -163,7 +166,7 @@ export async function POST(request: NextRequest) {
       fromAddress: from,
       toAddress: fields.correo,
       ccAddress: CC_RECIPIENTS.join(','),
-      subject: `Solicitud de cotización ${quoteNumber} · ${fields.empresa}`,
+      subject: `${isContact ? 'Consulta web' : 'Solicitud de cotización'} ${quoteNumber} · ${fields.empresa}`,
       content,
       mailFormat: 'html',
       encoding: 'UTF-8',

@@ -53,7 +53,7 @@ export default function QuoteRequest({ mode = 'cotizacion' }: { mode?: Mode }) {
       const response = await fetch('/api/cotizacion', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, producto, items: payloadItems, ts: loadedAt.current }),
+        body: JSON.stringify({ ...data, producto, items: payloadItems, tipo: mode, ts: loadedAt.current }),
       });
       const result = (await response.json().catch(() => ({}))) as { error?: string; quoteNumber?: string };
       if (!response.ok) throw new Error(result.error || 'No fue posible enviar la solicitud.');
