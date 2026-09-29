@@ -31,10 +31,6 @@ export interface ProductLine {
   considerations: string[];
   /** Líneas complementarias (slugs). */
   related: string[];
-  image: string;
-  /** contain = foto de producto recortada; cover = foto ambientada. */
-  imageFit: 'contain' | 'cover';
-  imagePosition?: string;
 }
 
 export const FAMILIES: Family[] = [
@@ -70,8 +66,6 @@ export const PRODUCT_LINES: ProductLine[] = [
       'Volumen aproximado de exámenes diarios.',
     ],
     related: ['electrodos-y-cables', 'accesorios-ecg'],
-    image: '/images/electrocardiograph.webp',
-    imageFit: 'contain',
   },
   {
     slug: 'holter-ecg',
@@ -90,8 +84,6 @@ export const PRODUCT_LINES: ProductLine[] = [
       'Cantidad de grabadoras para tu agenda de exámenes.',
     ],
     related: ['electrodos-y-cables', 'accesorios-ecg'],
-    image: '/images/holter-kit.webp',
-    imageFit: 'contain',
   },
   {
     slug: 'holter-de-presion',
@@ -109,8 +101,6 @@ export const PRODUCT_LINES: ProductLine[] = [
       'Cantidad de equipos según la demanda de exámenes.',
     ],
     related: ['manguitos-y-sensores', 'accesorios-ecg'],
-    image: '/images/line-blood-pressure.webp',
-    imageFit: 'cover',
   },
   {
     slug: 'monitores',
@@ -128,8 +118,6 @@ export const PRODUCT_LINES: ProductLine[] = [
       'Pacientes adultos, pediátricos o ambos.',
     ],
     related: ['manguitos-y-sensores', 'electrodos-y-cables'],
-    image: '/images/patient-monitor.webp',
-    imageFit: 'contain',
   },
   {
     slug: 'electrodos-y-cables',
@@ -147,8 +135,6 @@ export const PRODUCT_LINES: ProductLine[] = [
       'Consumo mensual estimado para programar reposiciones.',
     ],
     related: ['electrocardiografos', 'holter-ecg'],
-    image: '/images/line-electrodes.webp',
-    imageFit: 'cover',
   },
   {
     slug: 'manguitos-y-sensores',
@@ -166,8 +152,6 @@ export const PRODUCT_LINES: ProductLine[] = [
       'Si prefieres accesorios reutilizables o desechables.',
     ],
     related: ['monitores', 'holter-de-presion'],
-    image: '/images/line-sensors.webp',
-    imageFit: 'cover',
   },
   {
     slug: 'accesorios-ecg',
@@ -184,8 +168,6 @@ export const PRODUCT_LINES: ProductLine[] = [
       'Frecuencia de reposición que te acomoda.',
     ],
     related: ['electrocardiografos', 'holter-ecg'],
-    image: '/images/medical-supplies-general.png',
-    imageFit: 'cover',
   },
 ];
 

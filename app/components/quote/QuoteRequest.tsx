@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Check, ClipboardList, Minus, Plus, Trash2 } from 'lucide-react';
 import { FAMILIES, PRODUCT_LINES, getLine, type ProductLine } from '@/lib/catalog';
@@ -128,16 +127,6 @@ export default function QuoteRequest({ mode = 'cotizacion' }: { mode?: Mode }) {
             <ul className="request-items">
               {items.map(({ entry, line }) => (
                 <li key={line.slug}>
-                  <div className="request-item-thumb">
-                    <Image
-                      src={line.image}
-                      alt=""
-                      fill
-                      sizes="64px"
-                      className={`fit-${line.imageFit}`}
-                      style={line.imagePosition ? { objectPosition: line.imagePosition } : undefined}
-                    />
-                  </div>
                   <div className="request-item-info">
                     <Link href={`/productos/${line.slug}`}>{line.name}</Link>
                     <span>{FAMILIES.find((family) => family.id === line.family)?.name}</span>

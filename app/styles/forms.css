@@ -83,20 +83,11 @@
 
 .request-items li {
   display: grid;
-  grid-template-columns: 70px minmax(0, 1fr) auto auto;
+  grid-template-columns: minmax(0, 1fr) auto auto;
   align-items: center;
   gap: 14px;
   padding: 12px 0;
   border-bottom: 1px solid var(--line);
-}
-.request-item-thumb {
-  position: relative;
-  overflow: hidden;
-  width: 70px;
-  height: 70px;
-  border: 1px solid var(--line);
-  border-radius: 4px;
-  background: #fff;
 }
 .request-item-info {
   display: grid;
@@ -312,25 +303,10 @@ a.channel-card:hover h2 {
     grid-template-columns: 1fr;
   }
   .request-items li {
-    grid-template-columns: 56px minmax(0, 1fr) auto;
+    grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
-      'thumb info remove'
-      'thumb qty qty';
+      'info remove'
+      'qty qty';
     row-gap: 8px;
   }
-  .request-item-thumb {
-    grid-area: thumb;
-    width: 56px;
-    height: 56px;
-  }
-  .request-item-info {
-    grid-area: info;
-  }
-  .request-items .qty {
-    grid-area: qty;
-    justify-self: start;
-  }
-  .request-remove {
-    grid-area: remove;
-  }
-}
+  

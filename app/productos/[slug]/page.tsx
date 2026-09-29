@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import SiteFrame from '../../components/site/SiteFrame';
 import PageIntro from '../../components/site/PageIntro';
@@ -45,30 +44,19 @@ export default async function ProductLinePage({ params }: { params: Promise<Para
 
       <div className="shell page-body">
         <div className="product-detail">
-          <div className="product-detail-media">
-            <Image
-              src={line.image}
-              alt={line.name}
-              fill
-              priority
-              sizes="(max-width: 900px) 100vw, 520px"
-              className={`fit-${line.imageFit}`}
-              style={line.imagePosition ? { objectPosition: line.imagePosition } : undefined}
-            />
-          </div>
-
           <div className="product-detail-info">
             <p className="product-detail-meta">
               Categoría: <strong>{family.name}</strong>
             </p>
             <p className="product-detail-summary">{line.summary}</p>
+            <h2 className="product-detail-subtitle">Usos habituales</h2>
             <ul className="product-detail-uses">
               {line.settings.map((setting) => (
                 <li key={setting}>{setting}</li>
               ))}
             </ul>
-            <ProductBuyBox slug={line.slug} name={line.name} />
           </div>
+          <ProductBuyBox slug={line.slug} name={line.name} />
         </div>
 
         <ProductTabs
