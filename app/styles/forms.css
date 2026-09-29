@@ -309,4 +309,14 @@ a.channel-card:hover h2 {
       'qty qty';
     row-gap: 8px;
   }
-  
+  .request-item-info {
+    grid-area: info;
+  }
+  .request-items .qty {
+    grid-area: qty;
+    justify-self: start;
+  }
+  .request-remove {
+    grid-area: remove;
+  }
+}
