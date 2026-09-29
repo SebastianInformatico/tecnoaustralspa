@@ -11,7 +11,7 @@ export default function PrivacyPage() {
   return (
     <SiteFrame>
       <PageIntro title="Política de privacidad" crumbs={[{ label: 'Política de privacidad' }]} />
-      <section className="section section--tight">
+      <section className="page-body">
         <div className="shell prose">
           <h2>Uso de datos de contacto</h2>
           <p>

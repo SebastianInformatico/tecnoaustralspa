@@ -1,75 +1,55 @@
-/* ─── Nosotros ───────────────────────────────────────────── */
-.about-grid {
+/* ─── Nosotros / Pellet ──────────────────────────────────── */
+.about-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: center;
-  gap: clamp(32px, 6vw, 72px);
+  grid-template-columns: minmax(0, 1fr) 340px;
+  align-items: start;
+  gap: 40px;
 }
-.about-media {
-  position: relative;
-  margin: 0;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
-  border-radius: var(--radius-lg);
-  background: var(--paper);
-}
-.about-media img {
-  object-fit: cover;
-}
-.about-copy h2 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-}
-.about-copy p {
-  margin-top: 16px;
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-
-.pillar-grid {
+.about-card {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.pillar-grid--three {
-  grid-template-columns: repeat(3, 1fr);
-}
-.pillar {
-  padding: 26px;
+  gap: 14px;
+  padding: 22px;
   border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: #fff;
+  border-radius: var(--radius);
+  background: var(--bg-soft);
 }
-.pillar svg {
-  width: 44px;
-  height: 44px;
-  padding: 11px;
-  border-radius: 12px;
-  background: var(--brand-50);
+.about-card h2 {
+  font-size: 16px;
+}
+.about-card p {
+  color: var(--text-2);
+  font-size: 14px;
+}
+.about-card dt {
+  color: var(--muted);
+  font-size: 12.5px;
+}
+.about-card dd {
+  margin: 1px 0 10px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.about-card a:not(.button) {
   color: var(--brand);
 }
-.pillar h3 {
-  margin-top: 18px;
-  font-size: 1.12rem;
-}
-.pillar p {
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
 
-/* ─── Textos legales ─────────────────────────────────────── */
+/* ─── Texto largo ────────────────────────────────────────── */
 .prose {
   max-width: 760px;
 }
+.prose-lead {
+  color: var(--text) !important;
+  font-size: 17px;
+}
 .prose h2 {
-  margin: 36px 0 12px;
-  font-size: 1.3rem;
+  margin: 26px 0 8px;
+  font-size: 18px;
 }
 .prose h2:first-child {
   margin-top: 0;
 }
 .prose p {
-  color: var(--ink-2);
+  color: var(--text-2);
   line-height: 1.7;
 }
 .prose a {
@@ -77,21 +57,8 @@
   text-decoration: underline;
 }
 
-@media (max-width: 1024px) {
-  .pillar-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (max-width: 860px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 560px) {
-  .pillar-grid,
-  .pillar-grid--three {
+  .about-layout {
     grid-template-columns: 1fr;
   }
 }

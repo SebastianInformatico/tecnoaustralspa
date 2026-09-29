@@ -14,12 +14,11 @@ export default function ContactPage() {
   return (
     <SiteFrame>
       <PageIntro
-        eyebrow="Contacto"
-        title="Hablemos"
-        lead="Para cotizar productos usa tu lista de cotización. Para cualquier otra consulta, escríbenos por el canal que prefieras."
+        title="Contacto"
+        lead="Para cotizar productos agrégalos a tu cotización. Para otras consultas usa este formulario o nuestros canales directos."
         crumbs={[{ label: 'Contacto' }]}
       />
-      <section className="section section--tight">
+      <section className="page-body">
         <div className="shell contact-layout">
           <div className="contact-channels">
             <a className="channel-card" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">

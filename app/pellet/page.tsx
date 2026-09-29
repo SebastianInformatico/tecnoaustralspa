@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Flame, MessageCircle, Package, Truck } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import SiteFrame from '../components/site/SiteFrame';
 import PageIntro from '../components/site/PageIntro';
 import { whatsappUrl } from '@/lib/site';
@@ -11,41 +11,33 @@ export const metadata: Metadata = {
 
 const PELLET_MESSAGE = 'Hola, me gustaría consultar por disponibilidad y valores de pellet.';
 
-const DETAILS = [
-  { icon: Flame, title: 'Producto', text: 'Pellet para calefacción. Consulta las alternativas disponibles antes de comprar.' },
-  { icon: Package, title: 'Formatos', text: 'Te informamos formatos y presentación según disponibilidad.' },
-  { icon: Truck, title: 'Despacho', text: 'Revisamos opciones de retiro y despacho al momento de cotizar.' },
-];
-
 export default function PelletPage() {
   return (
     <SiteFrame>
-      <PageIntro
-        eyebrow="Otra línea de negocio"
-        title="Venta de pellet para calefacción"
-        lead="Además del abastecimiento médico, comercializamos pellet en Chiloé. Consulta stock y valores por WhatsApp."
-        crumbs={[{ label: 'Pellet' }]}
-      >
-        <a
-          className="button button-primary page-intro-cta"
-          href={whatsappUrl(PELLET_MESSAGE)}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <MessageCircle aria-hidden="true" /> Consultar disponibilidad
-        </a>
-      </PageIntro>
-      <section className="section section--tight">
-        <div className="shell pillar-grid pillar-grid--three">
-          {DETAILS.map(({ icon: Icon, title, text }) => (
-            <article key={title} className="pillar">
-              <Icon aria-hidden="true" />
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </article>
-          ))}
+      <PageIntro title="Venta de pellet" crumbs={[{ label: 'Pellet' }]} />
+      <div className="shell page-body">
+        <div className="about-layout">
+          <div className="prose">
+            <p className="prose-lead">Además de insumos médicos, vendemos pellet para calefacción en Chiloé.</p>
+            <h2>Formatos y stock</h2>
+            <p>Los formatos, la disponibilidad y los valores se confirman al momento de consultar.</p>
+            <h2>Despacho y retiro</h2>
+            <p>Revisamos contigo las opciones de retiro o despacho según tu ubicación.</p>
+          </div>
+          <aside className="about-card">
+            <h2>Consultar pellet</h2>
+            <p>Escríbenos por WhatsApp con la cantidad que necesitas y tu comuna.</p>
+            <a
+              className="button button-whatsapp button-block"
+              href={whatsappUrl(PELLET_MESSAGE)}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MessageCircle aria-hidden="true" /> Consultar por WhatsApp
+            </a>
+          </aside>
         </div>
-      </section>
+      </div>
     </SiteFrame>
   );
 }

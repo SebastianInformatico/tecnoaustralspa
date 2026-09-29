@@ -101,7 +101,7 @@ export default function QuoteRequest({ mode = 'cotizacion' }: { mode?: Mode }) {
         <section className="request-list" aria-labelledby="request-list-title">
           <div className="request-list-head">
             <h2 id="request-list-title">
-              <ClipboardList aria-hidden="true" /> Tu lista
+              <ClipboardList aria-hidden="true" /> Productos en tu cotización
             </h2>
             {items.length > 0 && (
               <button type="button" className="text-link text-link--muted" onClick={clearQuote}>
@@ -113,8 +113,8 @@ export default function QuoteRequest({ mode = 'cotizacion' }: { mode?: Mode }) {
           {items.length === 0 ? (
             <div className="request-empty">
               <p>
-                <strong>Tu lista está vacía.</strong> Agrega líneas desde el catálogo, o escribe directamente en el
-                formulario lo que necesitas.
+                <strong>Tu cotización está vacía.</strong> Agrega productos desde el catálogo o escribe en el formulario
+                lo que necesitas.
               </p>
               <div className="request-quick-add">
                 {PRODUCT_LINES.map((line) => (
@@ -182,7 +182,7 @@ export default function QuoteRequest({ mode = 'cotizacion' }: { mode?: Mode }) {
 
           {suggestions.length > 0 && (
             <div className="request-suggest">
-              <p>Suele cotizarse junto con:</p>
+              <p>También te puede servir:</p>
               {suggestions.map((line) => (
                 <button key={line.slug} type="button" onClick={() => addToQuote(line.slug)}>
                   <Plus aria-hidden="true" /> {line.name}
@@ -192,16 +192,16 @@ export default function QuoteRequest({ mode = 'cotizacion' }: { mode?: Mode }) {
           )}
 
           <Link href="/productos" className="text-link">
-            Seguir viendo productos <ArrowRight aria-hidden="true" />
+            Seguir agregando productos <ArrowRight aria-hidden="true" />
           </Link>
         </section>
       )}
 
       <form className="request-form" onSubmit={submit} noValidate={false}>
-        <h2>{withItems ? 'Tus datos' : 'Escríbenos'}</h2>
+        <h2>{withItems ? 'Datos de contacto' : 'Formulario de contacto'}</h2>
         <p className="request-form-lead">
           {withItems
-            ? 'Te respondemos con disponibilidad, alternativas y valores. No es una compra: nada se cobra hasta que confirmes.'
+            ? 'Te enviamos valores, disponibilidad y plazo de despacho. Enviar la solicitud no genera compromiso de compra.'
             : 'Consultas comerciales, compatibilidad de insumos o compras institucionales.'}
         </p>
 

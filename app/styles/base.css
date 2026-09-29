@@ -1,43 +1,26 @@
 :root {
-  /* Marca (tomados del logo) */
   --brand: #0b5cc8;
-  --brand-600: #094ba6;
-  --brand-700: #083d87;
-  --brand-50: #eef4fd;
-  --brand-100: #dbe8fb;
-  --ink: #0c2340;
-  --ink-2: #203a58;
-  --navy-deep: #081a31;
-  --muted: #5a6d82;
-  --faint: #8797a8;
-  --line: #dfe6ee;
-  --line-strong: #c9d4e0;
-  --paper: #f5f7fa;
-  --white: #ffffff;
-  --signal: #13a37b;
-  --danger: #c43d2f;
+  --brand-dark: #094aa3;
+  --brand-light: #e9f1fc;
+  --navy: #0c2340;
+  --text: #222b36;
+  --text-2: #4a5563;
+  --muted: #6b7684;
+  --line: #e2e5e9;
+  --line-dark: #cfd4da;
+  --bg-soft: #f4f5f7;
+  --whatsapp: #1f9d55;
+  --whatsapp-dark: #17834a;
+  --ok: #1a7f4b;
+  --danger: #c0392b;
+  --radius: 6px;
+  --font: var(--font-sans, 'Open Sans'), 'Segoe UI', Roboto, Arial, sans-serif;
 
   /* Compatibilidad con el documento /cotizacion */
-  --navy: var(--ink);
-  --navy-dark: var(--navy-deep);
+  --navy-dark: #081a31;
   --blue: var(--brand);
-  --text: var(--ink);
-
-  --radius-sm: 8px;
-  --radius: 12px;
-  --radius-lg: 18px;
-  --shadow-sm: 0 1px 2px rgba(12, 35, 64, 0.06);
-  --shadow: 0 10px 30px -12px rgba(12, 35, 64, 0.18);
-  --shadow-lg: 0 24px 60px -24px rgba(12, 35, 64, 0.3);
-  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --header-h: 72px;
-
-  /* Cuadrícula tipo papel de electrocardiograma */
-  --ecg-grid:
-    linear-gradient(rgba(11, 92, 200, 0.07) 1px, transparent 1px) 0 0 / 40px 40px,
-    linear-gradient(90deg, rgba(11, 92, 200, 0.07) 1px, transparent 1px) 0 0 / 40px 40px,
-    linear-gradient(rgba(11, 92, 200, 0.035) 1px, transparent 1px) 0 0 / 8px 8px,
-    linear-gradient(90deg, rgba(11, 92, 200, 0.035) 1px, transparent 1px) 0 0 / 8px 8px;
+  --font-geist-sans: var(--font);
+  --font-geist-mono: ui-monospace, 'SFMono-Regular', Menlo, monospace;
 }
 
 *,
@@ -48,21 +31,16 @@
 
 html {
   -webkit-text-size-adjust: 100%;
-  scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-h) + 16px);
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
-  overflow-x: clip;
-  background: var(--white);
-  color: var(--ink);
-  font-family: var(--font-geist-sans, system-ui), system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
-  font-size: 16px;
+  background: #fff;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 body.menu-open {
@@ -71,19 +49,15 @@ body.menu-open {
 
 h1,
 h2,
-h3,
-h4 {
+h3 {
   margin: 0;
-  color: var(--ink);
-  font-weight: 650;
-  line-height: 1.12;
-  letter-spacing: -0.02em;
-  text-wrap: balance;
+  color: var(--text);
+  font-weight: 700;
+  line-height: 1.25;
 }
 
 p {
   margin: 0;
-  text-wrap: pretty;
 }
 
 a {
@@ -117,13 +91,8 @@ ol {
 }
 
 :focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--brand) 55%, white);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-::selection {
-  background: var(--brand-100);
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
 }
 
 .sr-only {
@@ -140,12 +109,10 @@ ol {
   z-index: 100;
   top: 8px;
   left: 8px;
-  padding: 10px 16px;
-  border-radius: var(--radius-sm);
-  background: var(--ink);
+  padding: 8px 14px;
+  background: var(--navy);
   color: #fff;
-  transform: translateY(-160%);
-  transition: transform 0.2s var(--ease);
+  transform: translateY(-200%);
 }
 .skip-link:focus {
   transform: none;
@@ -153,58 +120,34 @@ ol {
 
 .shell {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1240px;
   margin-inline: auto;
-  padding-inline: clamp(20px, 4vw, 40px);
-}
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 14px;
-  color: var(--brand);
-  font-size: 0.78rem;
-  font-weight: 650;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.eyebrow::before {
-  width: 18px;
-  height: 2px;
-  border-radius: 2px;
-  background: currentColor;
-  content: '';
+  padding-inline: 20px;
 }
 
 /* Botones */
 .button {
   display: inline-flex;
-  min-height: 48px;
+  min-height: 44px;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 0 20px;
+  padding: 0 18px;
   border: 1px solid transparent;
-  border-radius: 10px;
-  font-size: 0.95rem;
+  border-radius: var(--radius);
+  font-size: 14.5px;
   font-weight: 600;
-  line-height: 1;
-  white-space: nowrap;
+  line-height: 1.2;
+  text-align: center;
   transition:
-    background-color 0.18s var(--ease),
-    border-color 0.18s var(--ease),
-    color 0.18s var(--ease),
-    transform 0.18s var(--ease),
-    box-shadow 0.18s var(--ease);
+    background-color 0.15s,
+    border-color 0.15s,
+    color 0.15s;
 }
 .button svg {
   width: 18px;
   height: 18px;
   flex: none;
-}
-.button:active {
-  transform: translateY(1px);
 }
 .button:disabled {
   cursor: not-allowed;
@@ -212,34 +155,25 @@ ol {
 }
 .button-primary {
   background: var(--brand);
-  box-shadow: 0 6px 16px -8px rgba(11, 92, 200, 0.7);
   color: #fff;
 }
 .button-primary:hover {
-  background: var(--brand-600);
+  background: var(--brand-dark);
 }
 .button-ghost {
-  border-color: var(--line-strong);
+  border-color: var(--line-dark);
   background: #fff;
-  color: var(--ink);
+  color: var(--text);
 }
 .button-ghost:hover {
-  border-color: var(--ink);
+  border-color: var(--text-2);
 }
-.button-light {
-  background: #fff;
-  color: var(--ink);
-}
-.button-light:hover {
-  background: var(--brand-50);
-}
-.button-outline-light {
-  border-color: rgba(255, 255, 255, 0.35);
+.button-whatsapp {
+  background: var(--whatsapp);
   color: #fff;
 }
-.button-outline-light:hover {
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.08);
+.button-whatsapp:hover {
+  background: var(--whatsapp-dark);
 }
 .button-block {
   width: 100%;
@@ -249,56 +183,50 @@ ol {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 0;
   border: 0;
   background: none;
-  padding: 0;
   color: var(--brand);
-  font-size: 0.95rem;
+  font-size: 14px;
   font-weight: 600;
 }
-.text-link svg {
-  width: 16px;
-  height: 16px;
-  transition: transform 0.18s var(--ease);
+.text-link:hover {
+  text-decoration: underline;
 }
-.text-link:hover svg {
-  transform: translateX(3px);
+.text-link svg {
+  width: 15px;
+  height: 15px;
 }
 .text-link--muted {
   color: var(--muted);
-  font-weight: 500;
+  font-weight: 400;
 }
 
-/* Trazo ECG */
-.ecg-line {
-  width: 100%;
-  height: 40px;
-  overflow: visible;
+.link-arrow {
+  color: var(--brand);
+  font-weight: 600;
 }
-.ecg-line path {
-  fill: none;
-  stroke: currentColor;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2;
-  vector-effect: non-scaling-stroke;
+.link-arrow::after {
+  content: ' →';
+}
+.link-arrow:hover {
+  text-decoration: underline;
 }
 
 .fit-contain {
-  padding: 8%;
+  padding: 6%;
   object-fit: contain;
 }
 .fit-cover {
   object-fit: cover;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+.bullet-list {
+  display: grid;
+  gap: 6px;
+  padding-left: 20px;
+  list-style: disc;
+}
+.bullet-list li::marker {
+  color: var(--brand);
 }

@@ -3,24 +3,17 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ClipboardList, Mail, Menu, MessageCircle, Truck, X } from 'lucide-react';
+import { ClipboardList, Menu, MessageCircle, Search, X } from 'lucide-react';
 import Brand from './Brand';
-import { NAV_LINKS, SITE, whatsappUrl } from '@/lib/site';
+import { PRODUCT_LINES } from '@/lib/catalog';
+import { SITE, whatsappUrl } from '@/lib/site';
 import { useQuoteList } from '@/lib/quote-list';
 
 export default function Header() {
   const pathname = usePathname() || '/';
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const quote = useQuoteList();
   const count = quote.reduce((total, line) => total + line.qty, 0);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
 
   useEffect(() => {
     setOpen(false);
@@ -31,84 +24,119 @@ export default function Header() {
     return () => document.body.classList.remove('menu-open');
   }, [open]);
 
-  const isActive = (href: string) => pathname === href || pathname.startsWith(`${href}/`);
-
   return (
-    <>
+    <header className="site-header">
       <div className="topbar">
         <div className="shell topbar-inner">
-          <p>
-            <Truck aria-hidden="true" />
-            Despacho a todo Chile desde {SITE.city}, Chiloé
-          </p>
-          <div className="topbar-links">
-            <a href={`mailto:${SITE.email}`}>
-              <Mail aria-hidden="true" />
-              {SITE.email}
-            </a>
-            <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
-              <MessageCircle aria-hidden="true" />
-              WhatsApp
-            </a>
-          </div>
+          <span>Despacho a todo Chile · Casa matriz en {SITE.city}, Chiloé</span>
+          <nav aria-label="Enlaces de ayuda">
+            <Link href="/nosotros">Nosotros</Link>
+            <Link href="/contacto">Contacto</Link>
+            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+          </nav>
         </div>
       </div>
-      <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
-        <div className="shell header-inner">
-          <Brand />
-          <nav className="main-nav" aria-label="Principal">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={isActive(link.href) ? 'is-active' : undefined}
-                aria-current={isActive(link.href) ? 'page' : undefined}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </nav>
-          <div className="header-actions">
-            <Link
-              href="/cotizar"
-              className={`quote-pill${count > 0 ? ' has-items' : ''}`}
-              aria-label={`Lista de cotización: ${count} ${count === 1 ? 'producto' : 'productos'}`}
-            >
+
+      <div className="shell header-main">
+        <button
+          type="button"
+          className="icon-button menu-toggle"
+          aria-expanded={open}
+          aria-controls="mobile-menu"
+          aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
+          onClick={() => setOpen((value) => !value)}
+        >
+          {open ? <X /> : <Menu />}
+        </button>
+
+        <Brand />
+
+        <form className="header-search" action="/productos" role="search">
+          <label className="sr-only" htmlFor="header-q">
+            Buscar productos
+          </label>
+          <input id="header-q" name="q" type="search" placeholder="Buscar productos" autoComplete="off" />
+          <button type="submit" aria-label="Buscar">
+            <Search aria-hidden="true" />
+          </button>
+        </form>
+
+        <div className="header-actions">
+          <a className="header-whatsapp" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
+            <MessageCircle aria-hidden="true" />
+            <span>
+              <small>Ventas</small>
+              WhatsApp
+            </span>
+          </a>
+          <Link href="/cotizar" className="header-quote" aria-label={`Mi cotización, ${count} productos`}>
+            <span className="header-quote-icon">
               <ClipboardList aria-hidden="true" />
-              <span className="quote-pill-label">Mi cotización</span>
-              <span className="quote-pill-count" suppressHydrationWarning>
-                {count}
-              </span>
-            </Link>
-            <button
-              type="button"
-              className="menu-toggle"
-              aria-expanded={open}
-              aria-controls="mobile-menu"
-              aria-label={open ? 'Cerrar menú' : 'Abrir menú'}
-              onClick={() => setOpen((value) => !value)}
-            >
-              {open ? <X /> : <Menu />}
-            </button>
-          </div>
+              {count > 0 && (
+                <b className="header-quote-count" suppressHydrationWarning>
+                  {count}
+                </b>
+              )}
+            </span>
+            <span className="header-quote-label">Mi cotización</span>
+          </Link>
         </div>
-        <div id="mobile-menu" className={`mobile-menu${open ? ' is-open' : ''}`} hidden={!open}>
-          <nav className="shell" aria-label="Menú móvil">
-            <Link href="/">Inicio</Link>
-            {NAV_LINKS.map((link) => (
-              <Link key={link.href} href={link.href} aria-current={isActive(link.href) ? 'page' : undefined}>
-                {link.label}
+      </div>
+
+      <nav className="category-bar" aria-label="Categorías">
+        <div className="shell">
+          <ul>
+            <li>
+              <Link href="/productos" className={pathname === '/productos' ? 'is-active' : undefined}>
+                Todos los productos
               </Link>
+            </li>
+            {PRODUCT_LINES.map((line) => (
+              <li key={line.slug}>
+                <Link
+                  href={`/productos/${line.slug}`}
+                  className={pathname === `/productos/${line.slug}` ? 'is-active' : undefined}
+                >
+                  {line.navLabel}
+                </Link>
+              </li>
             ))}
-            <Link href="/cotizar" className="button button-primary">
-              Ver mi cotización ({count})
-            </Link>
-            <a className="button button-ghost" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
+          </ul>
+        </div>
+      </nav>
+
+      {open && (
+        <div id="mobile-menu" className="mobile-menu">
+          <div className="shell">
+            <p className="mobile-menu-title">Productos</p>
+            <ul>
+              <li>
+                <Link href="/productos">Todos los productos</Link>
+              </li>
+              {PRODUCT_LINES.map((line) => (
+                <li key={line.slug}>
+                  <Link href={`/productos/${line.slug}`}>{line.name}</Link>
+                </li>
+              ))}
+            </ul>
+            <p className="mobile-menu-title">Empresa</p>
+            <ul>
+              <li>
+                <Link href="/nosotros">Nosotros</Link>
+              </li>
+              <li>
+                <Link href="/contacto">Contacto</Link>
+              </li>
+              <li>
+                <Link href="/pellet">Venta de pellet</Link>
+              </li>
+            </ul>
+            <a className="button button-whatsapp button-block" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
               <MessageCircle aria-hidden="true" /> Escribir por WhatsApp
             </a>
-          </nav>
+          </div>
         </div>
-      </header>
-    </>
+      )}
+    </header>
   );
 }

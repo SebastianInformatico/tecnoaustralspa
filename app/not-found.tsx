@@ -6,7 +6,6 @@ export default function NotFound() {
   return (
     <SiteFrame>
       <PageIntro
-        eyebrow="Error 404"
         title="No encontramos esta página"
         lead="Puede que el enlace haya cambiado con la nueva versión del sitio."
       >

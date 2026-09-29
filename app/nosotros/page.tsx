@@ -1,93 +1,63 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
-import { Handshake, PackageCheck, Truck, Wrench } from 'lucide-react';
+import Link from 'next/link';
 import SiteFrame from '../components/site/SiteFrame';
 import PageIntro from '../components/site/PageIntro';
-import ClosingCta from '../components/site/ClosingCta';
 import { SITE } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Nosotros',
-  description: `Tecno Salud Austral SPA: abastecimiento de equipos cardiológicos e insumos clínicos desde ${SITE.city}, Chiloé.`,
+  description: `${SITE.name}: venta de equipos de cardiología, monitoreo e insumos clínicos desde ${SITE.city}, Chiloé.`,
 };
-
-const PILLARS = [
-  {
-    icon: Handshake,
-    title: 'Asesoría antes de vender',
-    text: 'Preguntamos cómo trabajas antes de recomendar un equipo. Si lo que tienes sirve, te lo decimos.',
-  },
-  {
-    icon: PackageCheck,
-    title: 'Equipo e insumo juntos',
-    text: 'Cotizamos el equipo con los consumibles que va a necesitar, para que no se detenga por un cable o un rollo de papel.',
-  },
-  {
-    icon: Truck,
-    title: 'Logística desde el sur',
-    text: 'Coordinamos despachos a Chiloé, la Región de Los Lagos y el resto del país.',
-  },
-  {
-    icon: Wrench,
-    title: 'Seguimiento',
-    text: 'Después de la entrega seguimos disponibles para reposiciones, dudas de uso y compatibilidad.',
-  },
-];
 
 export default function AboutPage() {
   return (
     <SiteFrame>
-      <PageIntro
-        eyebrow="Nosotros"
-        title="Abastecimiento médico con base en Chiloé"
-        lead={`${SITE.name} provee equipos cardiológicos, monitoreo e insumos clínicos a profesionales e instituciones de salud. Trabajamos desde ${SITE.city} y despachamos a todo Chile.`}
-        crumbs={[{ label: 'Nosotros' }]}
-      />
-
-      <section className="section section--tight">
-        <div className="shell about-grid">
-          <figure className="about-media">
-            <Image
-              src="/images/medical-delivery-handoff.png"
-              alt="Entrega de insumos médicos en un centro de salud"
-              fill
-              sizes="(max-width: 900px) 100vw, 560px"
-            />
-          </figure>
-          <div className="about-copy">
-            <h2>Un proveedor que conoce la realidad del sur.</h2>
-            <p>
-              Abastecer una consulta en Castro, una posta rural o un hospital regional no es lo mismo que hacerlo en
-              Santiago. Los tiempos de despacho, la continuidad de insumos y la compatibilidad con los equipos que ya
-              existen importan tanto como el precio.
+      <PageIntro title="Nosotros" crumbs={[{ label: 'Nosotros' }]} />
+      <div className="shell page-body">
+        <div className="about-layout">
+          <div className="prose">
+            <p className="prose-lead">
+              {SITE.name} es una empresa de {SITE.city}, Chiloé, dedicada a la venta de equipos de cardiología,
+              monitoreo de pacientes e insumos clínicos.
             </p>
+            <h2>Qué vendemos</h2>
             <p>
-              Por eso trabajamos por cotización: revisamos cada pedido, proponemos alternativas cuando algo no está
-              disponible y coordinamos la entrega directamente contigo.
+              Electrocardiógrafos, Holter ECG, Holter de presión, monitores de paciente y los insumos que estos equipos
+              necesitan en el día a día: electrodos, cables paciente, manguitos, sensores, papel de registro y otros
+              consumibles.
+            </p>
+            <h2>A quién atendemos</h2>
+            <p>
+              Consultas particulares, centros médicos, clínicas, centros de salud primaria y hospitales. Para compras
+              institucionales enviamos cotización formal por correo.
+            </p>
+            <h2>Cómo trabajamos</h2>
+            <p>
+              Vendemos por cotización. Revisamos cada solicitud, confirmamos compatibilidad con el equipo del cliente y
+              enviamos valores, disponibilidad y plazo de despacho. Despachamos a todas las regiones del país.
             </p>
           </div>
-        </div>
-      </section>
 
-      <section className="section section--paper">
-        <div className="shell">
-          <header className="section-head">
-            <p className="eyebrow">Cómo trabajamos</p>
-            <h2>Cuatro compromisos con cada cliente.</h2>
-          </header>
-          <div className="pillar-grid">
-            {PILLARS.map(({ icon: Icon, title, text }) => (
-              <article key={title} className="pillar">
-                <Icon aria-hidden="true" />
-                <h3>{title}</h3>
-                <p>{text}</p>
-              </article>
-            ))}
-          </div>
+          <aside className="about-card">
+            <h2>Datos de la empresa</h2>
+            <dl>
+              <dt>Razón social</dt>
+              <dd>{SITE.name}</dd>
+              <dt>Dirección</dt>
+              <dd>{SITE.address}</dd>
+              <dt>Región</dt>
+              <dd>{SITE.region}</dd>
+              <dt>Correo</dt>
+              <dd>
+                <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+              </dd>
+            </dl>
+            <Link href="/contacto" className="button button-primary button-block">
+              Contactar
+            </Link>
+          </aside>
         </div>
-      </section>
-
-      <ClosingCta title="¿Conversamos sobre tu próximo pedido?" />
+      </div>
     </SiteFrame>
   );
 }

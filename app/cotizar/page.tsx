@@ -12,12 +12,11 @@ export default function QuoteRequestPage() {
   return (
     <SiteFrame>
       <PageIntro
-        eyebrow="Cotización"
-        title="Solicitar cotización"
-        lead="Revisa tu lista, ajusta cantidades y déjanos tus datos. Te respondemos por correo con una propuesta."
+        title="Mi cotización"
+        lead="Revisa los productos, ajusta cantidades y completa tus datos. Te enviamos la cotización por correo."
         crumbs={[{ label: 'Cotización' }]}
       />
-      <section className="section section--tight">
+      <section className="page-body">
         <div className="shell">
           <QuoteRequest />
         </div>

@@ -17,6 +17,8 @@ export interface ProductLine {
   slug: string;
   code: string;
   name: string;
+  /** Nombre corto para la barra de categorías. */
+  navLabel: string;
   family: FamilyId;
   /** Una línea para tarjetas y listados. */
   summary: string;
@@ -60,6 +62,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     slug: 'electrocardiografos',
     code: 'ECG',
     name: 'Electrocardiógrafos',
+    navLabel: 'Electrocardiógrafos',
     family: 'diagnostico',
     summary: 'Registro ECG en reposo para consulta, urgencia y chequeo preventivo.',
     description:
@@ -79,6 +82,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     slug: 'holter-ecg',
     code: 'H-ECG',
     name: 'Holter ECG',
+    navLabel: 'Holter ECG',
     family: 'monitoreo',
     summary: 'Registro prolongado de la actividad cardíaca durante la rutina del paciente.',
     description:
@@ -98,6 +102,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     slug: 'holter-de-presion',
     code: 'MAPA',
     name: 'Holter de presión',
+    navLabel: 'Holter de presión',
     family: 'monitoreo',
     summary: 'Monitoreo ambulatorio de presión arterial (MAPA) para revisión clínica.',
     description:
@@ -116,6 +121,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     slug: 'monitores',
     code: 'MON',
     name: 'Monitores de paciente',
+    navLabel: 'Monitores',
     family: 'monitoreo',
     summary: 'Visualización continua de signos vitales en entornos de atención.',
     description:
@@ -134,6 +140,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     slug: 'electrodos-y-cables',
     code: 'ECG+',
     name: 'Electrodos y cables paciente',
+    navLabel: 'Electrodos y cables',
     family: 'insumos',
     summary: 'Conexión estable entre el paciente y el equipo para una buena señal.',
     description:
@@ -152,6 +159,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     slug: 'manguitos-y-sensores',
     code: 'NIBP',
     name: 'Manguitos y sensores',
+    navLabel: 'Manguitos y sensores',
     family: 'insumos',
     summary: 'Accesorios de medición para presión, oximetría y temperatura.',
     description:
@@ -170,6 +178,7 @@ export const PRODUCT_LINES: ProductLine[] = [
     slug: 'accesorios-ecg',
     code: 'SUP',
     name: 'Accesorios y consumibles',
+    navLabel: 'Accesorios',
     family: 'insumos',
     summary: 'Papel de registro, gel, baterías y repuestos para la operación diaria.',
     description:

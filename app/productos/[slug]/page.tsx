@@ -1,15 +1,12 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { CircleCheck, MapPin, MessageCircle, Truck } from 'lucide-react';
 import SiteFrame from '../../components/site/SiteFrame';
 import PageIntro from '../../components/site/PageIntro';
-import ClosingCta from '../../components/site/ClosingCta';
 import ProductCard from '../../components/catalog/ProductCard';
-import AddToQuoteButton from '../../components/catalog/AddToQuoteButton';
+import ProductBuyBox from '../../components/catalog/ProductBuyBox';
+import ProductTabs from '../../components/catalog/ProductTabs';
 import { PRODUCT_LINES, getFamily, getLine } from '@/lib/catalog';
-import { whatsappUrl } from '@/lib/site';
 
 type Params = { slug: string };
 
@@ -46,92 +43,85 @@ export default async function ProductLinePage({ params }: { params: Promise<Para
         ]}
       />
 
-      <section className="section section--tight">
-        <div className="shell line-layout">
-          <figure className={`line-media line-media--${line.imageFit}`}>
+      <div className="shell page-body">
+        <div className="product-detail">
+          <div className="product-detail-media">
             <Image
               src={line.image}
               alt={line.name}
               fill
               priority
-              sizes="(max-width: 900px) 100vw, 560px"
+              sizes="(max-width: 900px) 100vw, 520px"
               className={`fit-${line.imageFit}`}
               style={line.imagePosition ? { objectPosition: line.imagePosition } : undefined}
             />
-            <span className="line-media-code">{line.code}</span>
-          </figure>
+          </div>
 
-          <div className="line-info">
-            <p className="eyebrow">{family.name}</p>
-            <p className="line-lead">{line.description}</p>
-
-            <div className="line-actions">
-              <AddToQuoteButton slug={line.slug} name={line.name} />
-              <a
-                className="button button-ghost"
-                href={whatsappUrl(`Hola, quiero cotizar ${line.name}.`)}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle aria-hidden="true" /> Consultar por WhatsApp
-              </a>
-            </div>
-
-            <ul className="line-assurances">
-              <li>
-                <CircleCheck aria-hidden="true" /> Modelos y valores confirmados al cotizar
-              </li>
-              <li>
-                <Truck aria-hidden="true" /> Despacho a todo Chile
-              </li>
-              <li>
-                <MapPin aria-hidden="true" /> Atención desde Castro, Chiloé
-              </li>
-            </ul>
-
-            <div className="line-block">
-              <h2>Dónde se usa</h2>
-              <ul className="tag-list">
-                {line.settings.map((setting) => (
-                  <li key={setting}>{setting}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="line-block">
-              <h2>Para cotizar mejor, cuéntanos</h2>
-              <ol className="consider-list">
-                {line.considerations.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ol>
-            </div>
+          <div className="product-detail-info">
+            <p className="product-detail-meta">
+              Código: <strong>{line.code}</strong> · Categoría: <strong>{family.name}</strong>
+            </p>
+            <p className="product-detail-summary">{line.description}</p>
+            <ProductBuyBox slug={line.slug} name={line.name} />
           </div>
         </div>
-      </section>
 
-      {related.length > 0 && (
-        <section className="section section--paper">
-          <div className="shell">
-            <header className="section-head section-head--row">
-              <div>
-                <p className="eyebrow">Se cotiza junto con</p>
-                <h2>Complementa tu pedido</h2>
-              </div>
-              <Link href="/productos" className="text-link">
-                Ver catálogo completo
-              </Link>
-            </header>
-            <div className="product-grid">
+        <ProductTabs
+          tabs={[
+            {
+              id: 'descripcion',
+              label: 'Descripción',
+              content: (
+                <>
+                  <p>{line.description}</p>
+                  <p>
+                    Trabajamos con distintos modelos y marcas según disponibilidad. Indícanos tu necesidad y te enviamos
+                    las opciones con su ficha técnica.
+                  </p>
+                </>
+              ),
+            },
+            {
+              id: 'usos',
+              label: 'Usos',
+              content: (
+                <ul className="bullet-list">
+                  {line.settings.map((setting) => (
+                    <li key={setting}>{setting}</li>
+                  ))}
+                </ul>
+              ),
+            },
+            {
+              id: 'cotizar',
+              label: 'Datos para cotizar',
+              content: (
+                <>
+                  <p>Para enviarte una cotización precisa, incluye en tu solicitud:</p>
+                  <ul className="bullet-list">
+                    {line.considerations.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </>
+              ),
+            },
+          ]}
+        />
+
+        {related.length > 0 && (
+          <section className="block">
+            <div className="block-head">
+              <h2>Productos relacionados</h2>
+            </div>
+            <div className="product-grid product-grid--4">
               {related.map((item) => (
                 <ProductCard key={item.slug} line={item} />
               ))}
             </div>
-          </div>
-        </section>
-      )}
-
-      <ClosingCta />
+          </section>
+        )}
+      </div>
     </SiteFrame>
   );
 }

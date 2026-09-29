@@ -2,16 +2,18 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { Check, Plus } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { addToQuote, useQuoteList } from '@/lib/quote-list';
 
 interface Props {
   slug: string;
   name: string;
+  /** Cantidad a agregar (ficha de producto). */
+  qty?: number;
   variant?: 'solid' | 'compact';
 }
 
-export default function AddToQuoteButton({ slug, name, variant = 'solid' }: Props) {
+export default function AddToQuoteButton({ slug, name, qty = 1, variant = 'solid' }: Props) {
   const list = useQuoteList();
   const inList = list.some((line) => line.slug === slug);
   const [justAdded, setJustAdded] = useState(false);
@@ -19,11 +21,10 @@ export default function AddToQuoteButton({ slug, name, variant = 'solid' }: Prop
 
   useEffect(() => () => clearTimeout(timer.current), []);
 
-  if (inList && !justAdded) {
+  if (inList && !justAdded && variant === 'compact') {
     return (
-      <Link href="/cotizar" className={`add-quote is-added add-quote--${variant}`}>
-        <Check aria-hidden="true" />
-        <span>En tu cotización</span>
+      <Link href="/cotizar" className="add-quote add-quote--compact is-added">
+        <Check aria-hidden="true" /> En tu cotización
       </Link>
     );
   }
@@ -34,13 +35,13 @@ export default function AddToQuoteButton({ slug, name, variant = 'solid' }: Prop
       className={`add-quote add-quote--${variant}${justAdded ? ' is-added' : ''}`}
       aria-label={`Agregar ${name} a la cotización`}
       onClick={() => {
-        addToQuote(slug);
+        addToQuote(slug, qty);
         setJustAdded(true);
         clearTimeout(timer.current);
-        timer.current = setTimeout(() => setJustAdded(false), 1600);
+        timer.current = setTimeout(() => setJustAdded(false), 1800);
       }}
     >
-      {justAdded ? <Check aria-hidden="true" /> : <Plus aria-hidden="true" />}
+      {justAdded && <Check aria-hidden="true" />}
       <span aria-live="polite">{justAdded ? 'Agregado' : 'Agregar a cotización'}</span>
     </button>
   );

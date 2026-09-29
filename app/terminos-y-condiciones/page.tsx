@@ -11,7 +11,7 @@ export default function TermsPage() {
   return (
     <SiteFrame>
       <PageIntro title="Términos y condiciones" crumbs={[{ label: 'Términos y condiciones' }]} />
-      <section className="section section--tight">
+      <section className="page-body">
         <div className="shell prose">
           <h2>Uso del sitio</h2>
           <p>
