@@ -1,0 +1,97 @@
+/* ─── Nosotros ───────────────────────────────────────────── */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 72px);
+}
+.about-media {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  background: var(--paper);
+}
+.about-media img {
+  object-fit: cover;
+}
+.about-copy h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+.about-copy p {
+  margin-top: 16px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.pillar-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+.pillar {
+  padding: 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: #fff;
+}
+.pillar svg {
+  width: 44px;
+  height: 44px;
+  padding: 11px;
+  border-radius: 12px;
+  background: var(--brand-50);
+  color: var(--brand);
+}
+.pillar h3 {
+  margin-top: 18px;
+  font-size: 1.12rem;
+}
+.pillar p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* ─── Textos legales ─────────────────────────────────────── */
+.prose {
+  max-width: 760px;
+}
+.prose h2 {
+  margin: 36px 0 12px;
+  font-size: 1.3rem;
+}
+.prose h2:first-child {
+  margin-top: 0;
+}
+.prose p {
+  color: var(--ink-2);
+  line-height: 1.7;
+}
+.prose a {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .pillar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .pillar-grid,
+  .pillar-grid--three {
+    grid-template-columns: 1fr;
+  }
+}
