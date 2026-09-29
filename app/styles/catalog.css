@@ -11,7 +11,8 @@
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: 18px 18px 16px;
+  padding: 22px 18px 18px;
+  text-align: center;
   border: 1px solid var(--line);
   border-top: 3px solid var(--brand);
   border-radius: var(--radius);
@@ -46,10 +47,10 @@
 }
 .product-card-foot {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
-  margin: auto 0 12px;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin: auto 0 14px;
   padding-top: 16px;
 }
 .product-card-price {
@@ -477,10 +478,6 @@
   }
   .product-card-summary {
     font-size: 13px;
-  }
-  .product-card-foot {
-    flex-direction: column;
-    gap: 2px;
   }
   .product-card h3 {
     font-size: 14px;

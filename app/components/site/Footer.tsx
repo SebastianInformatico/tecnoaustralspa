@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Brand from './Brand';
-import ServiceBar from './ServiceBar';
 import SocialLinks from './SocialLinks';
 import { PRODUCT_LINES } from '@/lib/catalog';
 import { SITE, whatsappUrl } from '@/lib/site';
@@ -8,7 +7,6 @@ import { SITE, whatsappUrl } from '@/lib/site';
 export default function Footer() {
   return (
     <>
-      <ServiceBar />
       <footer className="site-footer">
         <div className="shell footer-grid">
           <div className="footer-col footer-about">
@@ -76,7 +74,7 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <div className="shell">
-            © {new Date().getFullYear()} {SITE.name}. Imágenes referenciales.
+            © {new Date().getFullYear()} {SITE.name}. Todos los derechos reservados.
           </div>
         </div>
       </footer>

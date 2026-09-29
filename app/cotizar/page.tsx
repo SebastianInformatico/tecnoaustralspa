@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function QuoteRequestPage() {
   return (
-    <SiteFrame>
+    <SiteFrame cta={false}>
       <PageIntro
         title="Mi cotización"
         lead="Revisa los productos, ajusta cantidades y completa tus datos. Te enviamos la cotización por correo."

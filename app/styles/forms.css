@@ -245,6 +245,16 @@
 }
 
 /* ─── Contacto ───────────────────────────────────────────── */
+.contact-form-wrap {
+  max-width: 820px;
+}
+.contact-form-wrap .request-form {
+  background: #fff;
+}
+.contact-form-wrap .request-form > h2,
+.contact-form-wrap .request-form-lead {
+  display: none;
+}
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);

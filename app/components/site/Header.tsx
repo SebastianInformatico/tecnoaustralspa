@@ -14,6 +14,7 @@ import { useQuoteList } from '@/lib/quote-list';
 export default function Header() {
   const pathname = usePathname() || '/';
   const [open, setOpen] = useState(false);
+  const [compact, setCompact] = useState(false);
   const quote = useQuoteList();
   const count = quote.reduce((total, line) => total + line.qty, 0);
 
@@ -22,12 +23,19 @@ export default function Header() {
   }, [pathname]);
 
   useEffect(() => {
+    const onScroll = () => setCompact(window.scrollY > 120);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => {
     document.body.classList.toggle('menu-open', open);
     return () => document.body.classList.remove('menu-open');
   }, [open]);
 
   return (
-    <header className="site-header">
+    <header className={`site-header${compact ? ' is-compact' : ''}`}>
       <div className="topbar">
         <div className="shell topbar-inner">
           <span>Despacho a todo Chile · Casa matriz en {SITE.city}, Chiloé</span>

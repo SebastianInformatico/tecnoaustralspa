@@ -12,11 +12,12 @@ interface Props {
   children?: React.ReactNode;
 }
 
-/** Migas de pan y título de páginas interiores. */
+/** Barra de título de páginas interiores (título centrado + migas de pan). */
 export default function PageIntro({ title, lead, crumbs = [], children }: Props) {
   return (
     <div className="page-intro">
       <div className="shell">
+        <h1>{title}</h1>
         {crumbs.length > 0 && (
           <nav className="breadcrumbs" aria-label="Ruta de navegación">
             <ol>
@@ -31,7 +32,6 @@ export default function PageIntro({ title, lead, crumbs = [], children }: Props)
             </ol>
           </nav>
         )}
-        <h1>{title}</h1>
         {lead && <p className="page-lead">{lead}</p>}
         {children}
       </div>

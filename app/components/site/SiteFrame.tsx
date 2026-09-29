@@ -1,10 +1,16 @@
 import Header from './Header';
 import Footer from './Footer';
-import { WhatsAppIcon } from './BrandIcons';
-import { whatsappUrl } from '@/lib/site';
+import PageEffects from './PageEffects';
+import CtaBand from './CtaBand';
 
-/** Estructura común de todas las páginas públicas: header, contenido, footer. */
-export default function SiteFrame({ children }: { children: React.ReactNode }) {
+interface Props {
+  children: React.ReactNode;
+  /** Franja "¿Necesitas cotizar?" antes del footer. */
+  cta?: boolean;
+}
+
+/** Estructura común de todas las páginas públicas: header, contenido, CTA y footer. */
+export default function SiteFrame({ children, cta = true }: Props) {
   return (
     <>
       <a className="skip-link" href="#contenido">
@@ -12,16 +18,16 @@ export default function SiteFrame({ children }: { children: React.ReactNode }) {
       </a>
       <Header />
       <main id="contenido">{children}</main>
+      {cta && (
+        <CtaBand
+          title="¿Necesitas una cotización?"
+          text="Agrega los productos que necesitas y te respondemos por correo con valores, disponibilidad y plazo de despacho."
+          buttonLabel="Solicitar cotización"
+          buttonHref="/cotizar"
+        />
+      )}
       <Footer />
-      <a
-        className="whatsapp-float"
-        href={whatsappUrl()}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Escribir por WhatsApp"
-      >
-        <WhatsAppIcon aria-hidden="true" />
-      </a>
+      <PageEffects />
     </>
   );
 }

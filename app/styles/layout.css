@@ -1,8 +1,13 @@
 /* ─── Header ─────────────────────────────────────────────── */
 .site-header {
-  position: relative;
+  position: sticky;
   z-index: 40;
+  top: -35px; /* la barra superior se va con el scroll; el resto queda fijo */
   background: #fff;
+  transition: box-shadow 0.25s;
+}
+.site-header.is-compact {
+  box-shadow: 0 4px 18px rgba(12, 35, 64, 0.12);
 }
 
 .topbar {
@@ -13,7 +18,7 @@
 }
 .topbar-inner {
   display: flex;
-  min-height: 34px;
+  height: 34px;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
@@ -32,6 +37,10 @@
   min-height: 84px;
   align-items: center;
   gap: 28px;
+  transition: min-height 0.25s;
+}
+.is-compact .header-main {
+  min-height: 66px;
 }
 .brand {
   flex: none;
@@ -39,6 +48,10 @@
 .brand img {
   width: auto;
   height: 46px;
+  transition: height 0.25s;
+}
+.is-compact .header-main .brand img {
+  height: 38px;
 }
 
 .header-search {
@@ -208,50 +221,56 @@
   margin-top: 20px;
 }
 
-/* ─── Páginas interiores ─────────────────────────────────── */
+/* ─── Barra de título (páginas interiores) ────────────────── */
 .page-intro {
-  padding: 18px 0 20px;
+  padding: 42px 0 38px;
   border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, #f6f8fb 0%, #eef2f7 100%);
+  text-align: center;
 }
 .page-intro h1 {
-  font-size: 26px;
+  color: var(--navy);
+  font-size: 32px;
 }
 .page-lead {
-  max-width: 720px;
-  margin-top: 6px;
+  max-width: 680px;
+  margin: 12px auto 0;
   color: var(--text-2);
+  font-size: 15.5px;
 }
 .page-intro-actions,
 .page-intro-cta {
-  margin-top: 16px;
+  margin-top: 18px;
 }
 .page-intro-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 10px;
 }
 .breadcrumbs {
-  margin-bottom: 10px;
-  font-size: 13px;
+  margin-top: 10px;
+  font-size: 13.5px;
 }
 .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   color: var(--muted);
 }
 .breadcrumbs li + li::before {
   margin: 0 8px;
   color: var(--line-dark);
-  content: '/';
+  content: '›';
 }
 .breadcrumbs a:hover {
   color: var(--brand);
 }
 .breadcrumbs [aria-current] {
-  color: var(--text);
+  color: var(--brand);
 }
 .page-body {
-  padding-block: 28px 16px;
+  padding-block: 32px 56px;
 }
 
 /* ─── Bloques ────────────────────────────────────────────── */
@@ -277,42 +296,6 @@
 }
 .block-head a:hover {
   text-decoration: underline;
-}
-
-/* ─── Franja de servicios ────────────────────────────────── */
-.service-bar {
-  margin-top: 56px;
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: var(--bg-soft);
-}
-.service-bar-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-.service-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 20px 16px;
-}
-.service-item + .service-item {
-  border-left: 1px solid var(--line);
-}
-.service-item svg {
-  width: 28px;
-  height: 28px;
-  flex: none;
-  color: var(--brand);
-  stroke-width: 1.6;
-}
-.service-item strong {
-  display: block;
-  font-size: 14px;
-}
-.service-item span {
-  color: var(--muted);
-  font-size: 13px;
 }
 
 /* ─── Redes sociales ─────────────────────────────────────── */
@@ -408,41 +391,122 @@
   font-size: 13px;
 }
 
-.whatsapp-float {
+/* ─── Botones flotantes ──────────────────────────────────── */
+.wa-widget {
   position: fixed;
   z-index: 30;
-  right: 18px;
-  bottom: 18px;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+.whatsapp-float {
   display: grid;
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   place-items: center;
   border-radius: 50%;
-  background: var(--whatsapp);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  background: #25d366;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
   color: #fff;
+  transition: transform 0.2s;
 }
 .whatsapp-float:hover {
-  background: var(--whatsapp-dark);
+  transform: scale(1.06);
 }
 .whatsapp-float svg {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
 }
-
+.wa-bubble {
+  position: relative;
+  display: grid;
+  max-width: 250px;
+  gap: 2px;
+  padding: 14px 34px 14px 16px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 8px 28px rgba(12, 35, 64, 0.2);
+  font-size: 13.5px;
+  animation: bubble-in 0.35s ease-out;
+}
+.wa-bubble::after {
+  position: absolute;
+  right: 22px;
+  bottom: -6px;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  content: '';
+  transform: rotate(45deg);
+}
+.wa-bubble strong {
+  color: var(--navy);
+}
+.wa-bubble span {
+  color: var(--text-2);
+}
+.wa-bubble-close {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: grid;
+  width: 24px;
+  height: 24px;
+  place-items: center;
+  border: 0;
+  background: none;
+  color: var(--muted);
+}
+.wa-bubble-close svg {
+  width: 14px;
+  height: 14px;
+}
+@keyframes bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+.scroll-top {
+  position: fixed;
+  z-index: 29;
+  right: 28px;
+  bottom: 88px;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border: 0;
+  border-radius: 4px;
+  background: var(--navy);
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition:
+    opacity 0.25s,
+    transform 0.25s,
+    background-color 0.15s;
+}
+.scroll-top.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: none;
+}
+.scroll-top:hover {
+  background: var(--brand);
+}
+.scroll-top svg {
+  width: 18px;
+  height: 18px;
+}
 /* ─── Responsive ─────────────────────────────────────────── */
 @media (max-width: 1024px) {
   .header-whatsapp {
     display: none;
-  }
-  .service-bar-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .service-item:nth-child(3) {
-    border-left: 0;
-  }
-  .service-item:nth-child(n + 3) {
-    border-top: 1px solid var(--line);
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
@@ -450,6 +514,10 @@
 }
 
 @media (max-width: 860px) {
+  .site-header {
+    position: relative;
+    top: auto;
+  }
   .topbar nav {
     display: none;
   }
@@ -481,18 +549,22 @@
   .brand img {
     height: 32px;
   }
-  .service-bar-grid {
-    grid-template-columns: 1fr;
-  }
-  .service-item + .service-item {
-    border-top: 1px solid var(--line);
-    border-left: 0;
-  }
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+  .page-intro {
+    padding: 28px 0 26px;
+  }
   .page-intro h1 {
-    font-size: 22px;
+    font-size: 24px;
+  }
+  .wa-widget {
+    right: 14px;
+    bottom: 14px;
+  }
+  .scroll-top {
+    right: 22px;
+    bottom: 80px;
   }
 }

@@ -15,8 +15,7 @@ export default function TermsPage() {
         <div className="shell prose">
           <h2>Uso del sitio</h2>
           <p>
-            La información disponible en este sitio tiene fines comerciales e informativos. Las imágenes son
-            referenciales. La disponibilidad de productos, condiciones de venta y despacho se confirma directamente
+            La información disponible en este sitio tiene fines comerciales e informativos. La disponibilidad de productos, condiciones de venta y despacho se confirma directamente
             durante el proceso de cotización.
           </p>
           <h2>Cotizaciones</h2>

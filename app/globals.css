@@ -2,6 +2,7 @@
  * Tecno Salud Austral — estilos globales
  * 1. base.css        tokens, reset, tipografía, botones
  * 2. layout.css      header, footer, secciones, encabezados de página
+ * 2b. elements.css   bloques estilo Elementor (títulos, icon box, CTA, animaciones)
  * 3. home.css        inicio
  * 4. catalog.css     catálogo, tarjetas y ficha de producto
  * 5. forms.css       cotización y contacto
@@ -10,6 +11,7 @@
  */
 @import './styles/base.css';
 @import './styles/layout.css';
+@import './styles/elements.css';
 @import './styles/home.css';
 @import './styles/catalog.css';
 @import './styles/forms.css';

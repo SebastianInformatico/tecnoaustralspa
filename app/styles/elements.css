@@ -1,0 +1,303 @@
+/* ─── Secciones ──────────────────────────────────────────── */
+.section {
+  padding-block: 64px;
+}
+.section--soft {
+  background: var(--bg-soft);
+}
+.section:not(.section--soft) + .section:not(.section--soft) {
+  padding-top: 0;
+}
+
+/* ─── Título de sección + divisor ────────────────────────── */
+.section-title {
+  margin-bottom: 36px;
+}
+.section-title--center {
+  text-align: center;
+}
+.section-title h1,
+.section-title h2 {
+  color: var(--navy);
+  font-size: 28px;
+}
+.section-divider {
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin-top: 14px;
+  background: var(--brand);
+}
+.section-title--center .section-divider {
+  margin-inline: auto;
+}
+.section-title p {
+  max-width: 640px;
+  margin-top: 14px;
+  color: var(--text-2);
+  font-size: 15.5px;
+}
+.section-title--center p {
+  margin-inline: auto;
+}
+.section-more {
+  margin-top: 28px;
+  text-align: center;
+}
+
+/* ─── Icon box ───────────────────────────────────────────── */
+.icon-boxes {
+  display: grid;
+  gap: 24px;
+}
+.icon-boxes--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.icon-boxes--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.icon-box {
+  padding: 30px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  text-align: center;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
+}
+.icon-box:hover {
+  border-color: transparent;
+  box-shadow: 0 10px 30px rgba(12, 35, 64, 0.1);
+  transform: translateY(-3px);
+}
+.icon-box-icon {
+  display: inline-grid;
+  width: 68px;
+  height: 68px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--brand-light);
+  color: var(--brand);
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+.icon-box:hover .icon-box-icon {
+  background: var(--brand);
+  color: #fff;
+}
+.icon-box-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke-width: 1.6;
+}
+.icon-box h3 {
+  margin-top: 18px;
+  color: var(--navy);
+  font-size: 17px;
+}
+.icon-box p {
+  margin-top: 8px;
+  color: var(--text-2);
+  font-size: 14.5px;
+}
+a.icon-box {
+  display: block;
+}
+.icon-box-detail {
+  display: block;
+  margin-top: 10px;
+  color: var(--navy);
+  font-size: 15px;
+  overflow-wrap: anywhere;
+}
+a.icon-box:hover .icon-box-detail {
+  color: var(--brand);
+}
+
+/* Pasos numerados */
+.steps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  counter-reset: step;
+}
+.step {
+  position: relative;
+  padding: 0 12px;
+  text-align: center;
+}
+.step-num {
+  display: inline-grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 2px solid var(--brand);
+  border-radius: 50%;
+  background: #fff;
+  color: var(--brand);
+  font-size: 20px;
+  font-weight: 700;
+}
+.step:not(:last-child)::after {
+  position: absolute;
+  top: 26px;
+  left: calc(50% + 40px);
+  width: calc(100% - 56px);
+  border-top: 2px dashed var(--line-dark);
+  content: '';
+}
+.step h3 {
+  margin-top: 16px;
+  color: var(--navy);
+  font-size: 17px;
+}
+.step p {
+  margin-top: 6px;
+  color: var(--text-2);
+  font-size: 14.5px;
+}
+
+/* ─── Franja CTA ─────────────────────────────────────────── */
+.cta-band {
+  background: linear-gradient(100deg, var(--navy) 0%, #0b4f9c 100%);
+  color: #fff;
+}
+.cta-band-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-block: 44px;
+}
+.cta-band h2 {
+  color: #fff;
+  font-size: 26px;
+}
+.cta-band p {
+  max-width: 620px;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.82);
+}
+.cta-band-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ─── Bloque dos columnas ────────────────────────────────── */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+.split-text p {
+  margin-top: 14px;
+  color: var(--text-2);
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+.split-text .button {
+  margin-top: 22px;
+}
+.check-list {
+  display: grid;
+  gap: 12px;
+}
+.check-list li {
+  position: relative;
+  padding: 14px 16px 14px 48px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  font-weight: 600;
+}
+.check-list li::before {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--brand);
+  color: #fff;
+  content: '✓';
+  font-size: 12px;
+  transform: translateY(-50%);
+}
+
+/* ─── Animación de entrada ───────────────────────────────── */
+.reveal-ready .reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+.reveal-ready .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 1024px) {
+  .icon-boxes--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 860px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .icon-boxes--3,
+  .steps-row {
+    grid-template-columns: 1fr;
+  }
+  .step:not(:last-child)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .section {
+    padding-block: 44px;
+  }
+  .section-title h1,
+  .section-title h2 {
+    font-size: 23px;
+  }
+  .icon-boxes--4 {
+    gap: 12px;
+  }
+  .icon-boxes--4 .icon-box {
+    padding: 20px 12px;
+  }
+  .icon-boxes--4 .icon-box-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .icon-boxes--4 .icon-box-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  .icon-boxes--4 .icon-box h3 {
+    margin-top: 12px;
+    font-size: 15px;
+  }
+  .icon-boxes--4 .icon-box p {
+    font-size: 13px;
+  }
+  .cta-band h2 {
+    font-size: 22px;
+  }
+  .cta-band-actions .button {
+    flex: 1 1 auto;
+  }
+}
